@@ -3,46 +3,283 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>이달의 식단표 | 이현웰가어린이집</title>
-  <meta name="robots" content="noindex" />
+  <title>2026년 7월 이유식 식단표 | 이현웰가어린이집</title>
+  <meta name="description" content="이현웰가어린이집 2026년 7월 이유식 식단표. 초기(4-5개월), 중기(6-8개월), 후기(9-11개월) 단계별 수제 이유식 식단을 안내합니다." />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
   <link rel="stylesheet" href="./css/style.css" />
   <style>
-    .menu-page { min-height: 70vh; padding: 120px 0 80px; text-align: center; }
-    .menu-page .box {
-      max-width: 520px; margin: 0 auto; background: #fff;
-      border: 1px solid var(--line); border-radius: var(--radius-lg);
-      padding: 56px 32px; box-shadow: var(--shadow-md);
+    /* ---------- 식단표 페이지 전용 스타일 ---------- */
+    .menu-hero {
+      padding: calc(var(--header-h) + 40px) 0 36px;
+      background:
+        radial-gradient(60% 50% at 100% 0%, rgba(220,229,212,.55) 0%, transparent 70%),
+        var(--bg);
+      text-align: center;
     }
-    .menu-page .e { font-size: 52px; }
-    .menu-page h1 { font-size: 24px; font-weight: 800; margin: 18px 0 10px; }
-    .menu-page p { color: var(--ink-soft); font-size: 15px; word-break: keep-all; }
-    .menu-page .btn { margin-top: 28px; }
+    .menu-hero .eyebrow { justify-content: center; }
+    .menu-hero .eyebrow::before { display: none; }
+    .menu-hero__meta {
+      display: inline-flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 18px;
+    }
+    .menu-hero__meta span {
+      padding: 7px 14px; border-radius: 999px; background: #fff;
+      border: 1px solid var(--line); font-size: 12.5px; font-weight: 600;
+      color: var(--ink-soft); box-shadow: var(--shadow-sm);
+    }
+
+    .menu-body { padding: 40px 0 80px; }
+
+    .week-card {
+      background: #fff; border: 1px solid var(--line);
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm); margin-bottom: 18px;
+      max-width: 680px; margin-inline: auto;
+    }
+    .week-card__head {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 20px; background: var(--bg-sage);
+      border-bottom: 1px solid var(--line);
+    }
+    .week-card__head h3 { font-size: 15px; font-weight: 800; color: var(--sage-deep); }
+    .week-card__head span { font-size: 12.5px; color: var(--ink-soft); font-weight: 600; }
+
+    .day-row {
+      display: flex; align-items: center; gap: 14px;
+      padding: 13px 20px; border-bottom: 1px solid var(--line);
+    }
+    .day-row:last-child { border-bottom: none; }
+    .day-row__date {
+      flex: none; width: 52px; text-align: center;
+      background: var(--bg-soft); border-radius: 10px; padding: 6px 0;
+    }
+    .day-row__date b { display: block; font-size: 16px; line-height: 1.2; color: var(--brown-deep); }
+    .day-row__date small { font-size: 11px; color: var(--ink-soft); font-weight: 600; }
+    .day-row__menu { flex: 1; min-width: 0; }
+    .day-row__menu h4 { font-size: 15px; font-weight: 700; word-break: keep-all; }
+    .day-row__menu .allergy {
+      display: inline-block; margin-left: 6px; padding: 2px 8px;
+      background: #FBEFE3; color: var(--brown); border-radius: 999px;
+      font-size: 11px; font-weight: 700; vertical-align: 2px;
+    }
+    .day-row__kcal { flex: none; text-align: right; font-size: 11.5px; color: var(--ink-soft); line-height: 1.5; }
+    .day-row__kcal b { color: var(--sage-deep); font-size: 12.5px; }
+
+    .day-row--holiday { background: var(--bg-soft); }
+    .day-row--holiday .day-row__menu h4 { color: var(--ink-soft); font-weight: 600; }
+
+    .menu-legend {
+      max-width: 680px; margin: 30px auto 0; padding: 20px 22px;
+      background: #fff; border: 1px solid var(--line); border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+    }
+    .menu-legend h4 { font-size: 14px; font-weight: 800; color: var(--brown-deep); margin-bottom: 10px; }
+    .menu-legend p { font-size: 12.5px; color: var(--ink-soft); line-height: 1.9; word-break: keep-all; }
+
+    .menu-notes { max-width: 680px; margin: 18px auto 0; }
+    .menu-notes .menu-note { margin-top: 0; }
+
+    .menu-cta { text-align: center; margin-top: 44px; }
+    .menu-cta p { font-size: 14.5px; color: var(--ink-soft); margin-bottom: 18px; word-break: keep-all; }
+    .menu-cta .btns { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+
+    .menu-footer {
+      text-align: center; padding: 28px 20px 40px;
+      font-size: 12px; color: var(--ink-soft); border-top: 1px solid var(--line);
+    }
+    @media (max-width: 480px) {
+      .day-row { padding: 12px 14px; gap: 10px; }
+      .day-row__kcal { display: none; } /* 좁은 화면에서는 열량 생략 */
+    }
   </style>
 </head>
 <body style="padding-bottom:0">
-  <!-- ============================================================
-       이달의 식단표 (임시 페이지)
-       실제 식단표 준비 시 두 가지 방법 중 선택:
-       1) 이 페이지에 식단 표(table) 또는 식단 이미지를 삽입
-       2) index.html 의 식단 버튼 링크를 PDF로 변경:
-          js/main.js → SITE_CONFIG.menu = "./assets/menu/2026-07-menu.pdf"
-       ============================================================ -->
-  <main class="menu-page">
-    <div class="container">
-      <div class="box">
-        <span class="e">🗓️</span>
-        <h1>2026년 7월 식단표</h1>
-        <p>
-          이달의 식단표는 현재 준비 중입니다.<br />
-          식단 관련 문의는 전화 또는 카카오톡으로 편하게 연락 주세요.
-        </p>
-        <p style="margin-top:14px; font-size:13px;">
-          ※ 식단은 원 사정과 식재료 수급 상황에 따라 변경될 수 있습니다.
-        </p>
-        <a href="./index.html" class="btn btn--brown">← 홈으로 돌아가기</a>
-      </div>
+
+  <header class="header scrolled">
+    <div class="container header__inner">
+      <a href="./index.html" class="logo" aria-label="이현웰가어린이집 홈으로">
+        <span class="logo__mark">🌿</span>
+        <span>이현웰가어린이집<span class="logo__sub">이유식 식단표</span></span>
+      </a>
+      <a href="./index.html" class="btn btn--ghost" style="padding:10px 18px;font-size:13.5px">← 홈으로</a>
     </div>
+  </header>
+
+  <main>
+    <section class="menu-hero">
+      <div class="container">
+        <span class="eyebrow">MONTHLY MENU</span>
+        <h1 class="section-title">2026년 7월 <em>이유식 식단표</em></h1>
+        <p class="section-desc" style="max-width:520px;margin-inline:auto">
+          아이의 성장 단계에 맞춰 정성껏 준비하는 한 달 식단입니다.<br />
+          아래에서 우리 아이 단계를 선택해 확인해 주세요.
+        </p>
+        <div class="menu-hero__meta">
+          <span>📋 발행일 2026. 6. 18.</span>
+          <span>🏛️ 진주시 어린이급식관리지원센터 식단 기반</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-body">
+      <div class="container">
+        <!-- 단계 선택 탭 -->
+        <div class="tabs" role="tablist" aria-label="이유식 단계 선택">
+          <button class="tab-btn active" role="tab" aria-selected="true" data-stage="first">초기<small style="display:block;font-size:10.5px;font-weight:600">4-5개월</small></button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-stage="mid">중기<small style="display:block;font-size:10.5px;font-weight:600">6-8개월</small></button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-stage="late">후기<small style="display:block;font-size:10.5px;font-weight:600">9-11개월</small></button>
+        </div>
+
+        <!-- 식단 렌더링 영역 (아래 MENU_DATA 에서 자동 생성) -->
+        <div id="menuRoot"></div>
+
+        <!-- 알레르기 유발식품 표시 안내 -->
+        <div class="menu-legend">
+          <h4>알레르기 유발식품 표시</h4>
+          <p>
+            ① 난류 &nbsp;② 우유 &nbsp;③ 메밀 &nbsp;④ 땅콩 &nbsp;⑤ 대두 &nbsp;⑥ 밀 &nbsp;⑦ 고등어 &nbsp;⑧ 게 &nbsp;⑨ 새우 &nbsp;⑩ 돼지고기
+            &nbsp;⑪ 복숭아 &nbsp;⑫ 토마토 &nbsp;⑬ 아황산류 &nbsp;⑭ 호두 &nbsp;⑮ 닭고기 &nbsp;⑯ 쇠고기 &nbsp;⑰ 오징어 &nbsp;⑱ 조개류(굴, 전복, 홍합 포함) &nbsp;⑲ 잣
+          </p>
+        </div>
+
+        <!-- 안내 문구 -->
+        <div class="menu-notes">
+          <div class="menu-note">
+            <p>※ 가정에서 보내주시는 이유식이 있을 경우 그것으로 대체합니다.</p>
+            <p>※ 알레르기 반응 시 해당 이유식을 중단하고 다른 이유식으로 대체하며, 알레르기 반응이 일어난 식품은 이후 활용하지 않는 것을 권장합니다.</p>
+            <p>※ 달걀노른자는 철분의 주요 급원이 될 수 있으므로 흰자와 구분하여 이유식에 활용할 수 있습니다.</p>
+            <p>※ 식단은 원 사정과 식재료 수급 상황에 따라 변경될 수 있습니다.</p>
+            <p>※ 알레르기 및 개별 식이 상담은 입소 상담 시 안내드립니다.</p>
+          </div>
+        </div>
+
+        <!-- 상담 유도 -->
+        <div class="menu-cta">
+          <p>식단이나 알레르기 관련해 궁금한 점이 있으신가요?</p>
+          <div class="btns">
+            <a href="tel:055-741-5003" class="btn btn--phone">📞 전화 상담하기</a>
+            <!-- 카카오채널 생성 후 실제 pf.kakao.com 링크로 교체 -->
+            <a href="https://pf.kakao.com/_PLACEHOLDER" class="btn btn--kakao" target="_blank" rel="noopener">💬 카카오톡 상담하기</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="menu-footer">
+    본 식단은 식생활안전관리원 식단지침을 기반으로 작성되었습니다.<br />
+    © 2026 이현웰가어린이집 · 055-741-5003
+  </footer>
+
+  <script>
+    /* ======================================================================
+       월별 식단 데이터
+       다음 달 식단으로 업데이트할 때는 아래 MENU_DATA 만 교체하면 됩니다.
+       - date: 일자, day: 요일
+       - holiday: true 면 급식 없는 날(공휴일 등)로 표시
+       - 각 단계(first/mid/late): [메뉴명, 열량(kcal), 단백질(g)]
+       - 메뉴명의 ①⑤⑮⑯ 등 원문자는 알레르기 유발식품 번호입니다.
+       ====================================================================== */
+    const MENU_DATA = {
+      weeks: [
+        {
+          label: "7월 1주", range: "7/1 (수) ~ 7/4 (토)",
+          days: [
+            { date: 1, day: "수", first: ["감자미음", 29, 0.6], mid: ["김가루죽", 52.1, 1.2], late: ["김가루무른밥", 85.7, 3.3] },
+            { date: 2, day: "목", first: ["열무미음", 26.1, 0.6], mid: ["열무죽", 56.6, 1.3], late: ["열무무른밥", 106, 2.4] },
+            { date: 3, day: "금", first: ["열무미음", 26.1, 0.6], mid: ["고구마죽", 66.6, 1.1], late: ["고구마무른밥", 100, 1.6] },
+            { date: 4, day: "토", first: ["열무미음", 26.1, 0.6], mid: ["참깨죽", 62.4, 1.5], late: ["참깨무른밥", 81.7, 2.4] },
+          ],
+        },
+        {
+          label: "7월 2주", range: "7/6 (월) ~ 7/11 (토)",
+          days: [
+            { date: 6, day: "월", first: ["새송이버섯미음", 38.3, 0.9], mid: ["파프리카죽", 58.5, 1.1], late: ["파프리카무른밥", 80.5, 1.5] },
+            { date: 7, day: "화", first: ["새송이버섯미음", 38.3, 0.9], mid: ["새송이버섯죽", 60.7, 1.6], late: ["새송이버섯무른밥", 83.1, 2.1] },
+            { date: 8, day: "수", first: ["새송이버섯미음", 38.3, 0.9], mid: ["얼갈이죽", 52.2, 1], late: ["얼갈이무른밥", 79, 1.6] },
+            { date: 9, day: "목", first: ["단호박미음", 28.5, 0.5], mid: ["단호박죽", 56.5, 1], late: ["단호박무른밥", 84.6, 1.6] },
+            { date: 10, day: "금", first: ["단호박미음", 28.5, 0.5], mid: ["녹두죽", 75.9, 2.7], late: ["녹두무른밥", 119.1, 4.4] },
+            { date: 11, day: "토", first: ["단호박미음", 28.5, 0.5], mid: ["찹쌀죽", 76.5, 1.4], late: ["찹쌀무른밥", 109.4, 2] },
+          ],
+        },
+        {
+          label: "7월 3주", range: "7/13 (월) ~ 7/18 (토)",
+          days: [
+            { date: 13, day: "월", first: ["배추미음", 26.4, 0.5], mid: ["감자죽", 58.2, 1.1], late: ["감자무른밥", 93.6, 1.9] },
+            { date: 14, day: "화", first: ["배추미음", 26.4, 0.5], mid: ["배추죽", 57.2, 1.2], late: ["배추무른밥", 79.2, 1.6] },
+            { date: 15, day: "수", first: ["배추미음", 26.4, 0.5], mid: ["흰살생선죽", 62.5, 2.7], late: ["흰살생선무른밥", 92.3, 4.1] },
+            { date: 16, day: "목", first: ["쇠고기육수미음⑯", 41.1, 1.4], mid: ["청경채죽", 75.2, 1.6], late: ["청경채무른밥", 105, 2.3] },
+            { date: 17, day: "금", holiday: "제헌절" },
+            { date: 18, day: "토", first: ["쇠고기육수미음⑯", 41.1, 1.4], mid: ["쇠고기죽⑯", 70.7, 2.8], late: ["쇠고기무른밥⑯", 106.2, 4.2] },
+          ],
+        },
+        {
+          label: "7월 4주", range: "7/20 (월) ~ 7/25 (토)",
+          days: [
+            { date: 20, day: "월", first: ["애호박미음", 26.7, 0.5], mid: ["애호박죽", 54.1, 1.1], late: ["애호박무른밥", 81.3, 1.6] },
+            { date: 21, day: "화", first: ["애호박미음", 26.7, 0.5], mid: ["닭살죽⑮", 61.8, 3.3], late: ["닭살무른밥⑮", 97.6, 5.9] },
+            { date: 22, day: "수", first: ["애호박미음", 26.7, 0.5], mid: ["양파당근죽", 53.5, 1], late: ["당근양파무른밥", 82.9, 1.6] },
+            { date: 23, day: "목", first: ["두부미음⑤", 30.1, 1], mid: ["두부죽⑤", 65.8, 2.4], late: ["두부무른밥⑤", 74.4, 2.4] },
+            { date: 24, day: "금", first: ["두부미음⑤", 30.1, 1], mid: ["미역죽", 60.8, 1.6], late: ["미역무른밥", 99.4, 4.5] },
+            { date: 25, day: "토", first: ["두부미음⑤", 30.1, 1], mid: ["달걀노른자죽①", 83.8, 2.5], late: ["달걀노른자무른밥①", 142.1, 4.6] },
+          ],
+        },
+        {
+          label: "7월 5주", range: "7/27 (월) ~ 7/31 (금)",
+          days: [
+            { date: 27, day: "월", first: ["가지미음", 26.6, 0.5], mid: ["타락죽②", 60.3, 1.3], late: ["타락무른밥②", 93.1, 2.2] },
+            { date: 28, day: "화", first: ["가지미음", 26.6, 0.5], mid: ["가지죽", 53.1, 1.1], late: ["가지무른밥", 79.7, 1.6] },
+            { date: 29, day: "수", first: ["가지미음", 26.6, 0.5], mid: ["잔멸치죽", 67.1, 4], late: ["잔멸치무른밥", 106.2, 7] },
+            { date: 30, day: "목", first: ["무미음", 26.6, 0.5], mid: ["무죽", 57.9, 1.1], late: ["무무른밥", 79.2, 1.4] },
+            { date: 31, day: "금", first: ["무미음", 26.6, 0.5], mid: ["누룽지죽", 78.6, 1.4], late: ["누룽지무른밥", 117.9, 2] },
+          ],
+        },
+      ],
+    };
+
+    /* 알레르기 원문자 → 이름 매핑 (배지 표시용) */
+    const ALLERGENS = { "①": "난류", "②": "우유", "③": "메밀", "④": "땅콩", "⑤": "대두", "⑥": "밀",
+      "⑦": "고등어", "⑧": "게", "⑨": "새우", "⑩": "돼지고기", "⑪": "복숭아", "⑫": "토마토",
+      "⑬": "아황산류", "⑭": "호두", "⑮": "닭고기", "⑯": "쇠고기", "⑰": "오징어", "⑱": "조개류", "⑲": "잣" };
+
+    const root = document.getElementById("menuRoot");
+
+    function render(stage) {
+      root.innerHTML = MENU_DATA.weeks.map((week) => `
+        <div class="week-card">
+          <div class="week-card__head"><h3>${week.label}</h3><span>${week.range}</span></div>
+          ${week.days.map((d) => {
+            if (d.holiday) {
+              return `<div class="day-row day-row--holiday">
+                <div class="day-row__date"><b>${d.date}</b><small>${d.day}</small></div>
+                <div class="day-row__menu"><h4>🎌 ${d.holiday} (급식 없음)</h4></div>
+              </div>`;
+            }
+            const [name, kcal, protein] = d[stage];
+            const marks = name.match(/[①-⑲]/g) || [];
+            const badge = marks.length
+              ? `<span class="allergy">${marks.map((m) => ALLERGENS[m]).join(" · ")}</span>` : "";
+            return `<div class="day-row">
+              <div class="day-row__date"><b>${d.date}</b><small>${d.day}</small></div>
+              <div class="day-row__menu"><h4>${name}${badge}</h4></div>
+              <div class="day-row__kcal"><b>${kcal}</b> kcal<br />단백질 ${protein}g</div>
+            </div>`;
+          }).join("")}
+        </div>`).join("");
+    }
+
+    document.querySelectorAll(".tab-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".tab-btn").forEach((b) => {
+          b.classList.remove("active");
+          b.setAttribute("aria-selected", "false");
+        });
+        btn.classList.add("active");
+        btn.setAttribute("aria-selected", "true");
+        render(btn.dataset.stage);
+      });
+    });
+
+    render("first");
+  </script>
 </body>
 </html>
