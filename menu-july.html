@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이달의 식단표 | 이현웰가어린이집</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <style>
+    .menu-page { min-height: 70vh; padding: 120px 0 80px; text-align: center; }
+    .menu-page .box {
+      max-width: 520px; margin: 0 auto; background: #fff;
+      border: 1px solid var(--line); border-radius: var(--radius-lg);
+      padding: 56px 32px; box-shadow: var(--shadow-md);
+    }
+    .menu-page .e { font-size: 52px; }
+    .menu-page h1 { font-size: 24px; font-weight: 800; margin: 18px 0 10px; }
+    .menu-page p { color: var(--ink-soft); font-size: 15px; word-break: keep-all; }
+    .menu-page .btn { margin-top: 28px; }
+  </style>
+</head>
+<body style="padding-bottom:0">
+  <!-- ============================================================
+       이달의 식단표 (임시 페이지)
+       실제 식단표 준비 시 두 가지 방법 중 선택:
+       1) 이 페이지에 식단 표(table) 또는 식단 이미지를 삽입
+       2) index.html 의 식단 버튼 링크를 PDF로 변경:
+          js/main.js → SITE_CONFIG.menu = "./assets/menu/2026-07-menu.pdf"
+       ============================================================ -->
+  <main class="menu-page">
+    <div class="container">
+      <div class="box">
+        <span class="e">🗓️</span>
+        <h1>2026년 7월 식단표</h1>
+        <p>
+          이달의 식단표는 현재 준비 중입니다.<br />
+          식단 관련 문의는 전화 또는 카카오톡으로 편하게 연락 주세요.
+        </p>
+        <p style="margin-top:14px; font-size:13px;">
+          ※ 식단은 원 사정과 식재료 수급 상황에 따라 변경될 수 있습니다.
+        </p>
+        <a href="./index.html" class="btn btn--brown">← 홈으로 돌아가기</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
