@@ -658,19 +658,19 @@
         </div>
 
         <div class="location__inner">
-          <!-- 지도 영역: 카카오맵 iframe 발급 후 아래 .map-placeholder 를 지우고
-               <iframe src="카카오맵 퍼가기 URL"></iframe> 을 넣으세요. -->
-          <div class="map-frame reveal">
-            <div class="map-placeholder">
-              <div>
-                <div class="pin">📍</div>
-                <h4>이현웰가어린이집</h4>
-                <p>경남 진주시 진주대로 1319 관리동, 이현하이클래스웰가</p>
-                <div class="map-links">
-                  <a href="https://map.kakao.com/?q=%EA%B2%BD%EB%82%A8%20%EC%A7%84%EC%A3%BC%EC%8B%9C%20%EC%A7%84%EC%A3%BC%EB%8C%80%EB%A1%9C%201319" target="_blank" rel="noopener" data-config="kakaomap">카카오맵으로 보기</a>
-                  <a href="https://map.naver.com/p/search/%EC%9D%B4%ED%98%84%EC%9B%B0%EA%B0%80%EC%96%B4%EB%A6%B0%EC%9D%B4%EC%A7%91" target="_blank" rel="noopener" data-config="navermap">네이버지도로 보기</a>
-                </div>
-              </div>
+          <div class="location__map reveal">
+            <!-- 무료 구글 지도 임베드 (API 키·가입 불필요)
+                 카카오맵 퍼가기 코드를 발급받으면(map.kakao.com → 공유 → 지도 퍼가기)
+                 아래 iframe 만 교체하세요. -->
+            <div class="map-frame">
+              <iframe
+                src="https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1z6rK964KoIOynhOyjvOyLnCDsp4Tso7zrjIDroZwgMTMxOQ!6i17!3m1!1sko!5m1!1sko"
+                title="이현웰가어린이집 위치 지도" loading="lazy" allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="map-actions">
+              <a href="https://map.kakao.com/?q=%EA%B2%BD%EB%82%A8%20%EC%A7%84%EC%A3%BC%EC%8B%9C%20%EC%A7%84%EC%A3%BC%EB%8C%80%EB%A1%9C%201319" target="_blank" rel="noopener" data-config="kakaomap">🗺️ 카카오맵에서 보기</a>
+              <a href="https://map.naver.com/p/search/%EC%9D%B4%ED%98%84%EC%9B%B0%EA%B0%80%EC%96%B4%EB%A6%B0%EC%9D%B4%EC%A7%91" target="_blank" rel="noopener" data-config="navermap">🧭 네이버지도에서 보기</a>
             </div>
           </div>
 

@@ -58,11 +58,14 @@
 카카오채널 생성 후 QR 이미지를 `assets/images/kakao-qr.png` 로 저장하고
 `index.html` 의 QR `<img src>` 를 교체하세요.
 
-### 4. 지도 iframe — 오시는 길 섹션
+### 4. 지도 — 오시는 길 섹션
 
-현재는 지도 placeholder + 카카오맵/네이버지도 링크 버튼입니다.
-카카오맵 퍼가기(iframe) 코드를 발급받으면 `index.html` 의
-`.map-placeholder` 를 지우고 `.map-frame` 안에 `<iframe>` 을 넣으세요.
+현재 **구글 지도 무료 임베드**(API 키 불필요)가 적용되어 있고,
+카카오맵/네이버지도 바로가기 버튼이 지도 아래에 있습니다.
+
+한국 사용자에게 더 친숙한 카카오맵으로 바꾸려면:
+map.kakao.com 에서 장소 검색 → 공유 → **지도 퍼가기** 코드 발급 후
+`index.html` 의 `.map-frame` 안 `<iframe>` 을 교체하세요. (역시 무료)
 
 ### 5. 기타
 
