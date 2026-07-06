@@ -35,10 +35,10 @@
 | 히어로 | hero-classroom.jpg |
 | 공간 소개 대형 | space-main.jpg |
 | 공간 카드: 놀이공간 | space-play.jpg |
-| 공간 카드: 몬테소리 활동공간 | space-montessori.jpg |
+| 공간 카드: 교구 활동공간 | space-montessori.jpg |
 | 공간 카드: 위생관리 공간 | space-hygiene.jpg |
 | 공간 카드: 등하원 공간 | space-entrance.jpg |
-| 몬테소리 섹션 | montessori.jpg |
+| 프로그램(교구 뇌활동교육) 섹션 | montessori.jpg |
 | 체험활동 섹션 | experience.jpg (사물놀이 공연) |
 
 아직 임시 이미지(Unsplash)인 곳 — 실제 사진 확보 시 `<img src>` 교체:
