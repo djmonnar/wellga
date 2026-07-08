@@ -36,6 +36,7 @@
       box-shadow: var(--shadow-sm);
     }
     .menu-switch__btn {
+      display: block; text-align: center; text-decoration: none;
       border: 0; background: transparent; border-radius: 999px;
       padding: 12px 14px; font: inherit; font-size: 14px; font-weight: 800;
       color: var(--ink-soft); cursor: pointer;
@@ -48,13 +49,29 @@
       display: none;
     }
 
+    .menu-section {
+      scroll-margin-top: calc(var(--header-h) + 18px);
+      margin-top: 28px;
+    }
+    .menu-section + .menu-section { margin-top: 46px; }
+    .menu-section__intro {
+      max-width: 680px; margin: 0 auto 18px; text-align: center;
+    }
+    .menu-section__intro h2 {
+      font-size: 24px; font-weight: 900; color: var(--brown-deep);
+    }
+    .menu-section__intro p {
+      margin-top: 7px; font-size: 14px; color: var(--ink-soft);
+      line-height: 1.7; word-break: keep-all;
+    }
+
     .week-card {
       background: #fff; border: 1px solid var(--line);
       border-radius: var(--radius-md); overflow: hidden;
       box-shadow: var(--shadow-sm); margin-bottom: 18px;
       max-width: 680px; margin-inline: auto;
     }
-    #menuRoot.general-menu .week-card { max-width: 860px; }
+    .menu-section--general .week-card { max-width: 860px; }
     .week-card__head {
       display: flex; align-items: center; justify-content: space-between;
       padding: 14px 20px; background: var(--bg-sage);
@@ -160,7 +177,7 @@
         <h1 class="section-title">2026년 7월 <em>식단표</em></h1>
         <p class="section-desc" style="max-width:520px;margin-inline:auto">
           0세 이유식과 1세 이상 식단을 한 곳에서 확인할 수 있도록 정리했습니다.<br />
-          아래에서 연령과 단계를 선택해 주세요.
+          0세 이유식 아래에 1세 이상 식단이 함께 이어서 표시됩니다.
         </p>
         <div class="menu-hero__meta">
           <span>📋 발행일 2026. 6. 18.</span>
@@ -171,20 +188,37 @@
 
     <section class="menu-body">
       <div class="container">
-        <div class="menu-switch" role="tablist" aria-label="식단 종류 선택">
-          <button class="menu-switch__btn active" type="button" role="tab" aria-selected="true" data-view="baby">0세 이유식</button>
-          <button class="menu-switch__btn" type="button" role="tab" aria-selected="false" data-view="general">1세 이상 식단</button>
-        </div>
+        <nav class="menu-switch" aria-label="식단 바로가기">
+          <a class="menu-switch__btn active" href="#babyMenu">0세 이유식</a>
+          <a class="menu-switch__btn" href="#generalMenu">1세 이상 식단</a>
+        </nav>
 
-        <!-- 이유식 단계 선택 탭 -->
-        <div class="tabs stage-tabs" id="stageTabs" role="tablist" aria-label="이유식 단계 선택">
-          <button class="tab-btn active" type="button" role="tab" aria-selected="true" data-stage="first">초기<small style="display:block;font-size:10.5px;font-weight:600">4-5개월</small></button>
-          <button class="tab-btn" type="button" role="tab" aria-selected="false" data-stage="mid">중기<small style="display:block;font-size:10.5px;font-weight:600">6-8개월</small></button>
-          <button class="tab-btn" type="button" role="tab" aria-selected="false" data-stage="late">후기<small style="display:block;font-size:10.5px;font-weight:600">9-11개월</small></button>
-        </div>
+        <section class="menu-section" id="babyMenu">
+          <div class="menu-section__intro">
+            <h2>0세 이유식</h2>
+            <p>초기, 중기, 후기 단계별 이유식 식단입니다.</p>
+          </div>
 
-        <!-- 식단 렌더링 영역 (아래 식단 데이터에서 자동 생성) -->
-        <div id="menuRoot"></div>
+          <!-- 이유식 단계 선택 탭 -->
+          <div class="tabs stage-tabs" id="stageTabs" role="tablist" aria-label="이유식 단계 선택">
+            <button class="tab-btn active" type="button" role="tab" aria-selected="true" data-stage="first">초기<small style="display:block;font-size:10.5px;font-weight:600">4-5개월</small></button>
+            <button class="tab-btn" type="button" role="tab" aria-selected="false" data-stage="mid">중기<small style="display:block;font-size:10.5px;font-weight:600">6-8개월</small></button>
+            <button class="tab-btn" type="button" role="tab" aria-selected="false" data-stage="late">후기<small style="display:block;font-size:10.5px;font-weight:600">9-11개월</small></button>
+          </div>
+
+          <!-- 0세 이유식 렌더링 영역 -->
+          <div id="menuRoot"></div>
+        </section>
+
+        <section class="menu-section menu-section--general" id="generalMenu">
+          <div class="menu-section__intro">
+            <h2>1세 이상 식단</h2>
+            <p>오전 간식, 점심, 오후 간식을 날짜별로 함께 확인할 수 있습니다.</p>
+          </div>
+
+          <!-- 1세 이상 식단 렌더링 영역 -->
+          <div id="generalMenuRoot" class="general-menu"></div>
+        </section>
 
         <!-- 알레르기 유발식품 표시 안내 -->
         <div class="menu-legend">
@@ -362,18 +396,19 @@
       "⑦": "고등어", "⑧": "게", "⑨": "새우", "⑩": "돼지고기", "⑪": "복숭아", "⑫": "토마토",
       "⑬": "아황산류", "⑭": "호두", "⑮": "닭고기", "⑯": "쇠고기", "⑰": "오징어", "⑱": "조개류", "⑲": "잣" };
 
-    const root = document.getElementById("menuRoot");
+    const babyRoot = document.getElementById("menuRoot");
+    const generalRoot = document.getElementById("generalMenuRoot");
     const notesRoot = document.getElementById("menuNotes");
     const stageTabs = document.getElementById("stageTabs");
     let currentStage = "first";
 
-    function renderNotes(view) {
-      notesRoot.innerHTML = `<div class="menu-note">${MENU_NOTES[view].map((note) => `<p>${note}</p>`).join("")}</div>`;
+    function renderNotes() {
+      const notes = Array.from(new Set([...MENU_NOTES.baby, ...MENU_NOTES.general]));
+      notesRoot.innerHTML = `<div class="menu-note">${notes.map((note) => `<p>${note}</p>`).join("")}</div>`;
     }
 
     function renderBaby(stage) {
-      root.className = "";
-      root.innerHTML = BABY_MENU_DATA.weeks.map((week) => `
+      babyRoot.innerHTML = BABY_MENU_DATA.weeks.map((week) => `
         <div class="week-card">
           <div class="week-card__head"><h3>${week.label}</h3><span>${week.range}</span></div>
           ${week.days.map((d) => {
@@ -394,7 +429,6 @@
             </div>`;
           }).join("")}
         </div>`).join("");
-      renderNotes("baby");
     }
 
     function splitMeal(text) {
@@ -418,8 +452,7 @@
     }
 
     function renderGeneral() {
-      root.className = "general-menu";
-      root.innerHTML = GENERAL_MENU_DATA.weeks.map((week) => `
+      generalRoot.innerHTML = GENERAL_MENU_DATA.weeks.map((week) => `
         <div class="week-card">
           <div class="week-card__head"><h3>${week.label}</h3><span>${week.range}</span></div>
           ${week.days.map((d) => {
@@ -443,25 +476,13 @@
             </div>`;
           }).join("")}
         </div>`).join("");
-      renderNotes("general");
-    }
-
-    function setView(view) {
-      document.querySelectorAll(".menu-switch__btn").forEach((btn) => {
-        const active = btn.dataset.view === view;
-        btn.classList.toggle("active", active);
-        btn.setAttribute("aria-selected", active ? "true" : "false");
-      });
-      stageTabs.classList.toggle("is-hidden", view !== "baby");
-      if (view === "baby") {
-        renderBaby(currentStage);
-      } else {
-        renderGeneral();
-      }
     }
 
     document.querySelectorAll(".menu-switch__btn").forEach((btn) => {
-      btn.addEventListener("click", () => setView(btn.dataset.view));
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".menu-switch__btn").forEach((item) => item.classList.remove("active"));
+        btn.classList.add("active");
+      });
     });
 
     document.querySelectorAll(".tab-btn").forEach((btn) => {
@@ -477,7 +498,9 @@
       });
     });
 
-    setView("baby");
+    renderBaby(currentStage);
+    renderGeneral();
+    renderNotes();
   </script>
 </body>
 </html>
