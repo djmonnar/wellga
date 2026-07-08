@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2026년 7월 이유식 식단표 | 이현웰가어린이집</title>
-  <meta name="description" content="이현웰가어린이집 2026년 7월 이유식 식단표. 초기(4-5개월), 중기(6-8개월), 후기(9-11개월) 단계별 수제 이유식 식단을 안내합니다." />
+  <title>2026년 7월 식단표 | 이현웰가어린이집</title>
+  <meta name="description" content="이현웰가어린이집 2026년 7월 식단표. 0세 이유식과 1세 이상 일반식 식단을 함께 안내합니다." />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
   <link rel="stylesheet" href="./css/style.css" />
   <style>
@@ -29,12 +29,32 @@
 
     .menu-body { padding: 40px 0 80px; }
 
+    .menu-switch {
+      max-width: 680px; margin: 0 auto 18px; padding: 5px;
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+      background: #fff; border: 1px solid var(--line); border-radius: 999px;
+      box-shadow: var(--shadow-sm);
+    }
+    .menu-switch__btn {
+      border: 0; background: transparent; border-radius: 999px;
+      padding: 12px 14px; font: inherit; font-size: 14px; font-weight: 800;
+      color: var(--ink-soft); cursor: pointer;
+    }
+    .menu-switch__btn.active {
+      background: var(--sage); color: #fff; box-shadow: var(--shadow-sm);
+    }
+    .stage-tabs { transition: opacity .2s ease, transform .2s ease; }
+    .stage-tabs.is-hidden {
+      display: none;
+    }
+
     .week-card {
       background: #fff; border: 1px solid var(--line);
       border-radius: var(--radius-md); overflow: hidden;
       box-shadow: var(--shadow-sm); margin-bottom: 18px;
       max-width: 680px; margin-inline: auto;
     }
+    #menuRoot.general-menu .week-card { max-width: 860px; }
     .week-card__head {
       display: flex; align-items: center; justify-content: space-between;
       padding: 14px 20px; background: var(--bg-sage);
@@ -67,6 +87,32 @@
     .day-row--holiday { background: var(--bg-soft); }
     .day-row--holiday .day-row__menu h4 { color: var(--ink-soft); font-weight: 600; }
 
+    .meal-row { align-items: flex-start; }
+    .meal-row .day-row__date { margin-top: 3px; }
+    .meal-grid {
+      display: grid; grid-template-columns: 1fr 1.4fr 1fr;
+      gap: 10px; width: 100%;
+    }
+    .meal-group {
+      min-width: 0; padding: 10px 12px;
+      background: var(--bg-soft); border-radius: 10px;
+      border: 1px solid rgba(139,111,78,.12);
+    }
+    .meal-label {
+      display: block; margin-bottom: 5px;
+      font-size: 11px; font-weight: 800; color: var(--sage-deep);
+    }
+    .meal-items {
+      display: flex; flex-wrap: wrap; gap: 5px 7px;
+      font-size: 13px; font-weight: 600; color: var(--ink);
+      line-height: 1.45; word-break: keep-all;
+    }
+    .meal-items span {
+      display: inline-flex; align-items: center;
+    }
+    .meal-summary { margin-top: 9px; font-size: 11.5px; color: var(--ink-soft); }
+    .meal-summary b { color: var(--sage-deep); }
+
     .menu-legend {
       max-width: 680px; margin: 30px auto 0; padding: 20px 22px;
       background: #fff; border: 1px solid var(--line); border-radius: var(--radius-md);
@@ -87,8 +133,11 @@
       font-size: 12px; color: var(--ink-soft); border-top: 1px solid var(--line);
     }
     @media (max-width: 480px) {
+      .menu-switch { grid-template-columns: 1fr; border-radius: 16px; }
+      .menu-switch__btn { border-radius: 12px; }
       .day-row { padding: 12px 14px; gap: 10px; }
       .day-row__kcal { display: none; } /* 좁은 화면에서는 열량 생략 */
+      .meal-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -98,7 +147,7 @@
     <div class="container header__inner">
       <a href="./index.html" class="logo" aria-label="이현웰가어린이집 홈으로">
         <span class="logo__mark">🌿</span>
-        <span>이현웰가어린이집<span class="logo__sub">이유식 식단표</span></span>
+        <span>이현웰가어린이집<span class="logo__sub">월간 식단표</span></span>
       </a>
       <a href="./index.html" class="btn btn--ghost" style="padding:10px 18px;font-size:13.5px">← 홈으로</a>
     </div>
@@ -108,10 +157,10 @@
     <section class="menu-hero">
       <div class="container">
         <span class="eyebrow">MONTHLY MENU</span>
-        <h1 class="section-title">2026년 7월 <em>이유식 식단표</em></h1>
+        <h1 class="section-title">2026년 7월 <em>식단표</em></h1>
         <p class="section-desc" style="max-width:520px;margin-inline:auto">
-          아이의 성장 단계에 맞춰 정성껏 준비하는 한 달 식단입니다.<br />
-          아래에서 우리 아이 단계를 선택해 확인해 주세요.
+          0세 이유식과 1세 이상 식단을 한 곳에서 확인할 수 있도록 정리했습니다.<br />
+          아래에서 연령과 단계를 선택해 주세요.
         </p>
         <div class="menu-hero__meta">
           <span>📋 발행일 2026. 6. 18.</span>
@@ -122,35 +171,33 @@
 
     <section class="menu-body">
       <div class="container">
-        <!-- 단계 선택 탭 -->
-        <div class="tabs" role="tablist" aria-label="이유식 단계 선택">
-          <button class="tab-btn active" role="tab" aria-selected="true" data-stage="first">초기<small style="display:block;font-size:10.5px;font-weight:600">4-5개월</small></button>
-          <button class="tab-btn" role="tab" aria-selected="false" data-stage="mid">중기<small style="display:block;font-size:10.5px;font-weight:600">6-8개월</small></button>
-          <button class="tab-btn" role="tab" aria-selected="false" data-stage="late">후기<small style="display:block;font-size:10.5px;font-weight:600">9-11개월</small></button>
+        <div class="menu-switch" role="tablist" aria-label="식단 종류 선택">
+          <button class="menu-switch__btn active" type="button" role="tab" aria-selected="true" data-view="baby">0세 이유식</button>
+          <button class="menu-switch__btn" type="button" role="tab" aria-selected="false" data-view="general">1세 이상 식단</button>
         </div>
 
-        <!-- 식단 렌더링 영역 (아래 MENU_DATA 에서 자동 생성) -->
+        <!-- 이유식 단계 선택 탭 -->
+        <div class="tabs stage-tabs" id="stageTabs" role="tablist" aria-label="이유식 단계 선택">
+          <button class="tab-btn active" type="button" role="tab" aria-selected="true" data-stage="first">초기<small style="display:block;font-size:10.5px;font-weight:600">4-5개월</small></button>
+          <button class="tab-btn" type="button" role="tab" aria-selected="false" data-stage="mid">중기<small style="display:block;font-size:10.5px;font-weight:600">6-8개월</small></button>
+          <button class="tab-btn" type="button" role="tab" aria-selected="false" data-stage="late">후기<small style="display:block;font-size:10.5px;font-weight:600">9-11개월</small></button>
+        </div>
+
+        <!-- 식단 렌더링 영역 (아래 식단 데이터에서 자동 생성) -->
         <div id="menuRoot"></div>
 
         <!-- 알레르기 유발식품 표시 안내 -->
         <div class="menu-legend">
-          <h4>알레르기 유발식품 표시</h4>
+          <h4>알레르기 및 자연식품 표시 안내</h4>
           <p>
             ① 난류 &nbsp;② 우유 &nbsp;③ 메밀 &nbsp;④ 땅콩 &nbsp;⑤ 대두 &nbsp;⑥ 밀 &nbsp;⑦ 고등어 &nbsp;⑧ 게 &nbsp;⑨ 새우 &nbsp;⑩ 돼지고기
             &nbsp;⑪ 복숭아 &nbsp;⑫ 토마토 &nbsp;⑬ 아황산류 &nbsp;⑭ 호두 &nbsp;⑮ 닭고기 &nbsp;⑯ 쇠고기 &nbsp;⑰ 오징어 &nbsp;⑱ 조개류(굴, 전복, 홍합 포함) &nbsp;⑲ 잣
+            <br />♠ 표시는 자연식품 간식입니다.
           </p>
         </div>
 
         <!-- 안내 문구 -->
-        <div class="menu-notes">
-          <div class="menu-note">
-            <p>※ 가정에서 보내주시는 이유식이 있을 경우 그것으로 대체합니다.</p>
-            <p>※ 알레르기 반응 시 해당 이유식을 중단하고 다른 이유식으로 대체하며, 알레르기 반응이 일어난 식품은 이후 활용하지 않는 것을 권장합니다.</p>
-            <p>※ 달걀노른자는 철분의 주요 급원이 될 수 있으므로 흰자와 구분하여 이유식에 활용할 수 있습니다.</p>
-            <p>※ 식단은 원 사정과 식재료 수급 상황에 따라 변경될 수 있습니다.</p>
-            <p>※ 알레르기 및 개별 식이 상담은 입소 상담 시 안내드립니다.</p>
-          </div>
-        </div>
+        <div class="menu-notes" id="menuNotes"></div>
 
         <!-- 상담 유도 -->
         <div class="menu-cta">
@@ -173,13 +220,13 @@
   <script>
     /* ======================================================================
        월별 식단 데이터
-       다음 달 식단으로 업데이트할 때는 아래 MENU_DATA 만 교체하면 됩니다.
+       다음 달 식단으로 업데이트할 때는 아래 BABY_MENU_DATA / GENERAL_MENU_DATA 를 교체하면 됩니다.
        - date: 일자, day: 요일
        - holiday: true 면 급식 없는 날(공휴일 등)로 표시
        - 각 단계(first/mid/late): [메뉴명, 열량(kcal), 단백질(g)]
        - 메뉴명의 ①⑤⑮⑯ 등 원문자는 알레르기 유발식품 번호입니다.
        ====================================================================== */
-    const MENU_DATA = {
+    const BABY_MENU_DATA = {
       weeks: [
         {
           label: "7월 1주", range: "7/1 (수) ~ 7/4 (토)",
@@ -236,15 +283,97 @@
       ],
     };
 
+    const GENERAL_MENU_DATA = {
+      weeks: [
+        {
+          label: "7월 1주", range: "7/1 (수) ~ 7/4 (토)",
+          days: [
+            { date: 1, day: "수", morning: "♠블루베리", lunch: "오리고기부추덮밥 ①⑤⑥⑩⑱ / 감자국⑤ / 도토리묵무침⑤⑥ / 깍두기⑨", afternoon: "단호박튀김 / 주스", kcal: 382, protein: 18.5 },
+            { date: 2, day: "목", morning: "전복죽", lunch: "백미밥 / 배추된장국⑤⑥ / 소시지케첩볶음 / ⑤⑥⑩⑯ / 가지나물⑤⑥ / 배추김치⑨", afternoon: "모밀국수③⑤⑥", kcal: 409.8, protein: 15.5 },
+            { date: 3, day: "금", morning: "♠천도복숭아⑪", lunch: "잡곡밥 / 미역국⑨ / 잡채 / ①⑤⑥ / 삼색나물⑤⑥ / 배추김치⑨", afternoon: "계란빵①②⑤⑥ / 우유②", kcal: 420, protein: 19.6 },
+            { date: 4, day: "토", morning: "두유⑤", lunch: "하이라이스⑤⑥⑩ / 숭늉 / 깍두기⑨ / 사과", afternoon: "수제블루베리우유②", kcal: 433, protein: 15.4 },
+          ],
+        },
+        {
+          label: "7월 2주", range: "7/6 (월) ~ 7/11 (토)",
+          days: [
+            { date: 6, day: "월", morning: "누룽지", lunch: "찹쌀밥 / 조갯살뭇국⑱ / 닭살데리야끼구이 / ⑤⑥⑮ / 상추나물 / 배추김치⑨", afternoon: "삶은옥수수 / 요구르트②", kcal: 423.5, protein: 16.9 },
+            { date: 7, day: "화", morning: "소고기죽", lunch: "백미밥 / 애호박국 / 연어구이⑤⑥⑩ / 새송이버섯나물⑤⑥ / 배추김치⑨", afternoon: "삶은달걀① / 주스", kcal: 424.6, protein: 19.8 },
+            { date: 8, day: "수", morning: "♠바나나", lunch: "양배추참치볶음밥 ①⑤⑥ / 순두부국⑤ / 브로콜리콩나물무침⑤ / 깍두기⑨", afternoon: "시리얼⑤ / 우유②", kcal: 415.3, protein: 15.8 },
+            { date: 9, day: "목", morning: "황태죽", lunch: "백미밥 / 시래깃국⑤⑥ / 쇠불고기⑤⑥⑯ / 무나물⑤⑥⑨ / 깍두기⑨", afternoon: "모둠어묵탕⑤⑥", kcal: 401, protein: 19.7 },
+            { date: 10, day: "금", morning: "♠자두", lunch: "잡곡밥 / 만둣국①⑤⑥⑩ / 코다리조림⑤⑥ / 깻잎순나물 / 배추김치⑨", afternoon: "백설기①②⑤⑥ / 우유②", kcal: 435, protein: 20.1 },
+            { date: 11, day: "토", morning: "두유", lunch: "백미밥1/2공기 / 바지락칼국수⑥⑱ / 배추김치⑨ / 오렌지", afternoon: "약식⑤⑥ / 둥글레차", kcal: 413.8, protein: 13.5 },
+          ],
+        },
+        {
+          label: "7월 3주", range: "7/13 (월) ~ 7/18 (토)",
+          days: [
+            { date: 13, day: "월", morning: "누룽지", lunch: "잡곡밥 / 맑은게살국 / ①⑤⑥⑧⑨ / 파달걀말이①⑤ / 잘게썬연근조림⑤⑥ / 배추김치⑨", afternoon: "♠찐감자 / 우유②", kcal: 398.8, protein: 14.8 },
+            { date: 14, day: "화", morning: "단호박죽", lunch: "백미밥 / 쇠고깃국⑯ / 온두부&양념장⑤⑥ / 단배추나물⑤⑥ / 깍두기⑨", afternoon: "야채전 / 보리차", kcal: 384.4, protein: 14 },
+            { date: 15, day: "수", note: "초복", morning: "♠털복숭아⑪", lunch: "백미밥1/2공기 / 삼계탕⑮ / 오이나물⑤⑥ / 깍두기⑨", afternoon: "핫케익 / 우유", kcal: 424, protein: 20.4 },
+            { date: 16, day: "목", morning: "콩죽", lunch: "백미밥 / 수제빗국⑥ / 갈치구이 ⑤⑥⑩ / 감자체조림⑤⑥ / 배추김치⑨", afternoon: "국수", kcal: 405.7, protein: 17.5 },
+            { date: 17, day: "금", note: "제헌절", noMeal: true },
+            { date: 18, day: "토", morning: "두유⑤", lunch: "쇠고기잡채덮밥 ⑤⑥⑯ / 다시마뭇국⑤⑥ / 배추김치⑨ / 배", afternoon: "옥수수스프②", kcal: 439.6, protein: 13.1 },
+          ],
+        },
+        {
+          label: "7월 4주", range: "7/20 (월) ~ 7/25 (토)",
+          days: [
+            { date: 20, day: "월", morning: "누룽지", lunch: "기장밥 / 근대된장국⑤⑥ / 가자미구이⑤⑥ / 파프리카나물⑤⑥ / 깍두기⑨", afternoon: "모닝빵&딸기잼①②⑤⑥ / 우유②", kcal: 426.1, protein: 17.2 },
+            { date: 21, day: "화", morning: "들깨죽", lunch: "백미밥 / 유부맑은국⑤⑥ / 순살닭볶음탕⑤⑥⑮ / 열무나물⑤⑥ / 배추김치⑨", afternoon: "찐만두⑤⑥⑩ / 주스", kcal: 432.3, protein: 17.3 },
+            { date: 22, day: "수", morning: "♠자두", lunch: "카레라이스⑤⑥⑩ / 실파미소장국⑤⑥ / 크래미볶음①⑤⑥⑧ / 배추김치⑨", afternoon: "곡물바⑤ / 우유②", kcal: 400.2, protein: 15 },
+            { date: 23, day: "목", morning: "양배추죽", lunch: "백미밥 / 들깨국⑤⑥⑱ / 쇠고기우엉조림 / ⑤⑥⑯ / 숙주나물⑤⑥ / 배추김치⑨", afternoon: "크림소스스파게티 / ②⑥⑩ / 보리차", kcal: 403.9, protein: 19.4 },
+            { date: 24, day: "금", morning: "♠사과", lunch: "기장밥 / 안매운김칫국⑨ / 돈까스&소스 / ①⑤⑥⑩⑫ / 고구마줄기나물⑤⑥ / 깍두기⑨", afternoon: "단호박치즈찜 / 우유②", kcal: 441.6, protein: 15.4 },
+            { date: 25, day: "토", morning: "두유⑤", lunch: "새우살볶음밥 ①⑤⑥⑨ / 우동국⑤⑥ / 깍두기⑨ / 파인애플", afternoon: "치즈스틱②⑤ / 매실차", kcal: 426.3, protein: 17.9 },
+          ],
+        },
+        {
+          label: "7월 5주", range: "7/27 (월) ~ 7/31 (금)",
+          days: [
+            { date: 27, day: "월", morning: "누룽지", lunch: "잡곡밥 / 황태국⑤⑥ / 오리고기양파볶음⑤ / 브로콜리나물 / 배추김치⑨", afternoon: "김밥속주먹밥 / ①⑤⑥⑧⑬ / 요구르트②", kcal: 398, protein: 18.2 },
+            { date: 28, day: "화", morning: "연두부죽", lunch: "백미밥 / 들깨무챗국 / 해물완자구이 / ①⑤⑥⑨⑰ / 애호박나물⑤⑥ / 깍두기⑨", afternoon: "♠찐고구마 / 보리차", kcal: 435.7, protein: 13.2 },
+            { date: 29, day: "수", morning: "♠바나나", lunch: "나물비빔밥& / 달걀프라이①⑤⑥ / 탕국⑤⑥⑱ / 어묵조림⑤⑥ / 배추김치⑨", afternoon: "우동볶음", kcal: 441.7, protein: 17 },
+            { date: 30, day: "목", morning: "브로콜리죽", lunch: "백미밥 / 미역국⑤⑥ / 잡채⑤⑥⑩ / 삼색나물⑤⑥ / 깍두기⑨", afternoon: "팽이버섯치즈전 / ①②⑤⑥ / 주스", kcal: 441.7, protein: 19.6 },
+            { date: 31, day: "금", morning: "♠수박", lunch: "잡곡밥 / 동태뭇국⑤⑥ / 두부케첩조림⑤⑥⑫ / 양배추나물⑤⑥ / 깍두기⑨", afternoon: "옥수수달걀찜① / 우유②", kcal: 396.8, protein: 15.8 },
+          ],
+        },
+      ],
+    };
+
+    const MENU_NOTES = {
+      baby: [
+        "※ 가정에서 보내주시는 이유식이 있을 경우 그것으로 대체합니다.",
+        "※ 알레르기 반응 시 해당 이유식을 중단하고 다른 이유식으로 대체하며, 알레르기 반응이 일어난 식품은 이후 활용하지 않는 것을 권장합니다.",
+        "※ 달걀노른자는 철분의 주요 급원이 될 수 있으므로 흰자와 구분하여 이유식에 활용할 수 있습니다.",
+        "※ 식단은 원 사정과 식재료 수급 상황에 따라 변경될 수 있습니다.",
+        "※ 알레르기 및 개별 식이 상담은 입소 상담 시 안내드립니다.",
+      ],
+      general: [
+        "※ 본 식단은 식생활안전관리원 식단지침을 기반으로 작성되었습니다.",
+        "※ 임의 변경된 식단에 대해서는 센터에서 책임지지 않습니다.",
+        "※ 국의 적정염도는 센터 권장 0.50% 이하입니다.",
+        "※ 진주시 과일간식지원사업으로 제공되는 금요일 과일 간식은 ♠ 표시로 안내합니다.",
+        "※ 식단은 원 사정과 식재료 수급 상황에 따라 변경될 수 있습니다.",
+      ],
+    };
+
     /* 알레르기 원문자 → 이름 매핑 (배지 표시용) */
     const ALLERGENS = { "①": "난류", "②": "우유", "③": "메밀", "④": "땅콩", "⑤": "대두", "⑥": "밀",
       "⑦": "고등어", "⑧": "게", "⑨": "새우", "⑩": "돼지고기", "⑪": "복숭아", "⑫": "토마토",
       "⑬": "아황산류", "⑭": "호두", "⑮": "닭고기", "⑯": "쇠고기", "⑰": "오징어", "⑱": "조개류", "⑲": "잣" };
 
     const root = document.getElementById("menuRoot");
+    const notesRoot = document.getElementById("menuNotes");
+    const stageTabs = document.getElementById("stageTabs");
+    let currentStage = "first";
 
-    function render(stage) {
-      root.innerHTML = MENU_DATA.weeks.map((week) => `
+    function renderNotes(view) {
+      notesRoot.innerHTML = `<div class="menu-note">${MENU_NOTES[view].map((note) => `<p>${note}</p>`).join("")}</div>`;
+    }
+
+    function renderBaby(stage) {
+      root.className = "";
+      root.innerHTML = BABY_MENU_DATA.weeks.map((week) => `
         <div class="week-card">
           <div class="week-card__head"><h3>${week.label}</h3><span>${week.range}</span></div>
           ${week.days.map((d) => {
@@ -265,7 +394,75 @@
             </div>`;
           }).join("")}
         </div>`).join("");
+      renderNotes("baby");
     }
+
+    function splitMeal(text) {
+      const parts = (text || "").split(" / ").map((item) => item.trim()).filter(Boolean);
+      return parts.reduce((items, item) => {
+        if (/^[①-⑲]+$/.test(item) && items.length) {
+          items[items.length - 1] += item;
+        } else {
+          items.push(item);
+        }
+        return items;
+      }, []);
+    }
+
+    function renderMealGroup(label, text) {
+      const items = splitMeal(text);
+      return `<div class="meal-group">
+        <span class="meal-label">${label}</span>
+        <div class="meal-items">${items.map((item) => `<span>${item}</span>`).join("")}</div>
+      </div>`;
+    }
+
+    function renderGeneral() {
+      root.className = "general-menu";
+      root.innerHTML = GENERAL_MENU_DATA.weeks.map((week) => `
+        <div class="week-card">
+          <div class="week-card__head"><h3>${week.label}</h3><span>${week.range}</span></div>
+          ${week.days.map((d) => {
+            const dayLabel = d.note ? `${d.day} · ${d.note}` : d.day;
+            if (d.noMeal) {
+              return `<div class="day-row day-row--holiday">
+                <div class="day-row__date"><b>${d.date}</b><small>${dayLabel}</small></div>
+                <div class="day-row__menu"><h4>${d.note || "휴일"} 식단 없음</h4></div>
+              </div>`;
+            }
+            return `<div class="day-row meal-row">
+              <div class="day-row__date"><b>${d.date}</b><small>${dayLabel}</small></div>
+              <div class="day-row__menu">
+                <div class="meal-grid">
+                  ${renderMealGroup("오전 간식", d.morning)}
+                  ${renderMealGroup("점심", d.lunch)}
+                  ${renderMealGroup("오후 간식", d.afternoon)}
+                </div>
+                <div class="meal-summary"><b>${d.kcal}</b> kcal · 단백질 ${d.protein}g</div>
+              </div>
+            </div>`;
+          }).join("")}
+        </div>`).join("");
+      renderNotes("general");
+    }
+
+    function setView(view) {
+      document.querySelectorAll(".menu-switch__btn").forEach((btn) => {
+        const active = btn.dataset.view === view;
+        btn.classList.toggle("active", active);
+        btn.setAttribute("aria-selected", active ? "true" : "false");
+      });
+      stageTabs.classList.toggle("is-hidden", view !== "baby");
+      if (view === "baby") {
+        renderBaby(currentStage);
+      } else {
+        renderGeneral();
+      }
+    }
+
+    document.querySelectorAll(".menu-switch__btn").forEach((btn) => {
+      btn.addEventListener("click", () => setView(btn.dataset.view));
+    });
 
     document.querySelectorAll(".tab-btn").forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -275,11 +472,12 @@
         });
         btn.classList.add("active");
         btn.setAttribute("aria-selected", "true");
-        render(btn.dataset.stage);
+        currentStage = btn.dataset.stage;
+        renderBaby(currentStage);
       });
     });
 
-    render("first");
+    setView("baby");
   </script>
 </body>
 </html>
