@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>하루일과와 키즈노트 | 이현웰가어린이집</title>
+  <meta name="description" content="이현웰가어린이집 하루일과. 0세와 1세의 일과 흐름, 키즈노트 소통, 식사량·낮잠·컨디션 공유 방식을 안내합니다." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="./index.html" class="logo" aria-label="이현웰가어린이집 홈">
+        <span class="logo__mark">🌿</span>
+        <span>이현웰가어린이집<span class="logo__sub">JINJU · 0-1세 전문</span></span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="./about.html">소개</a>
+        <a href="./program.html">프로그램</a>
+        <a href="./activity-watermelon.html">활동소식</a>
+        <a href="./daily.html">하루일과</a>
+        <a href="./menu-july.html">식단안내</a>
+        <a href="./contact.html">입소상담</a>
+      </nav>
+      <a href="tel:0507-1454-5003" class="btn btn--phone header__cta" data-config="tel">📞 전화상담</a>
+      <button class="hamburger" id="hamburger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobileMenu" aria-label="모바일 메뉴">
+    <a href="./about.html">소개</a>
+    <a href="./program.html">프로그램</a>
+    <a href="./activity-watermelon.html">활동소식</a>
+    <a href="./daily.html">하루일과</a>
+    <a href="./menu-july.html">식단안내</a>
+    <a href="./contact.html">입소상담</a>
+    <a href="tel:0507-1454-5003" class="btn btn--phone" data-config="tel">📞 전화 상담하기</a>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">DAILY ROUTINE</span>
+        <h1 class="section-title">아이의 리듬을 존중하는<br /><em>안정적인 하루</em></h1>
+        <p class="section-desc">
+          등원부터 하원까지 아이의 컨디션과 발달 속도를 살피며,
+          식사·놀이·휴식이 자연스럽게 이어지도록 돌봅니다.
+        </p>
+        <div class="page-hero__actions">
+          <a href="./menu-july.html" class="btn btn--brown">식단표 보기</a>
+          <a href="./contact.html" class="btn btn--ghost">상담 문의</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="kidsnote feature-split">
+      <div class="container feature-split__inner">
+        <div class="feature-split__img reveal">
+          <figure class="ph" data-label="키즈노트 소통 이미지 영역">
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&q=70"
+                 alt="스마트폰으로 아이의 하루 기록을 확인하는 모습" loading="lazy" onerror="this.remove()" />
+          </figure>
+        </div>
+        <div class="reveal" data-delay="1">
+          <span class="eyebrow">KIDSNOTE</span>
+          <h2 class="section-title">아이의 하루를<br />부모님께 <em>꼼꼼하게</em> 전합니다</h2>
+          <p class="section-desc">
+            말로 다 표현하기 어려운 영아기 아이들의 하루를 키즈노트를 통해
+            세심하게 기록하고 공유합니다.
+          </p>
+          <div class="kidsnote__items">
+            <div class="kn-item"><span class="e">🍚</span>식사량</div>
+            <div class="kn-item"><span class="e">😴</span>낮잠 시간</div>
+            <div class="kn-item"><span class="e">🚼</span>배변 상태</div>
+            <div class="kn-item"><span class="e">🌡️</span>컨디션</div>
+            <div class="kn-item"><span class="e">🧸</span>놀이활동</div>
+            <div class="kn-item"><span class="e">📷</span>사진 기록</div>
+            <div class="kn-item"><span class="e">📢</span>공지사항</div>
+          </div>
+          <div class="kidsnote__highlight">
+            직장에서도, 집에서도 부모님이 계신 곳 어디서든
+            우리 아이의 하루를 실시간으로 확인하실 수 있습니다.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="schedule">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">DAILY ROUTINE</span>
+          <h2 class="section-title">연령과 발달에 맞춘 <em>하루일과</em></h2>
+          <p class="section-desc">아이의 리듬을 존중하는 하루 흐름을 소개합니다.</p>
+        </div>
+        <div class="tabs reveal" role="tablist" aria-label="연령별 하루일과">
+          <button class="tab-btn active" type="button" role="tab" aria-selected="true" data-tab="routine0">0세 하루일과</button>
+          <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="routine1">1세 하루일과</button>
+        </div>
+        <div class="tab-panels">
+          <div class="tab-panel active" id="routine0" role="tabpanel">
+            <div class="timeline">
+              <div class="tl-item"><time>07:30 – 09:30</time><h4>등원 및 건강 확인</h4><p>기분, 체온, 수면 상태 확인</p></div>
+              <div class="tl-item"><time>09:30 – 10:00</time><h4>오전 간식 / 이유식</h4><p>성장 단계에 맞춘 수제 이유식</p></div>
+              <div class="tl-item"><time>10:00 – 11:00</time><h4>실내 자유놀이</h4><p>감각 탐색, 교구 놀이, 애착 놀이</p></div>
+              <div class="tl-item"><time>11:00 – 12:00</time><h4>점심 / 이유식</h4><p>개별 속도에 맞춘 식사 지도</p></div>
+              <div class="tl-item"><time>12:00 – 15:00</time><h4>낮잠 및 휴식</h4><p>아이 리듬에 맞춘 안정적인 휴식</p></div>
+              <div class="tl-item"><time>15:00 – 16:00</time><h4>오후 간식</h4><p>컨디션 확인 후 간식 제공</p></div>
+              <div class="tl-item"><time>16:00 – 19:30</time><h4>자유놀이 및 하원</h4><p>키즈노트 공유, 하원 준비</p></div>
+            </div>
+          </div>
+          <div class="tab-panel" id="routine1" role="tabpanel">
+            <div class="timeline">
+              <div class="tl-item"><time>07:30 – 09:30</time><h4>등원 및 인사</h4><p>선생님과 안정적으로 하루 시작</p></div>
+              <div class="tl-item"><time>09:30 – 10:00</time><h4>오전 간식</h4><p>스스로 먹기 연습</p></div>
+              <div class="tl-item"><time>10:00 – 11:20</time><h4>오감놀이 / 교구 활동</h4><p>교구, 자연물, 음악, 미술 활동</p></div>
+              <div class="tl-item"><time>11:30 – 12:20</time><h4>점심 식사</h4><p>올바른 식습관 형성</p></div>
+              <div class="tl-item"><time>12:30 – 15:00</time><h4>낮잠 및 휴식</h4><p>편안한 낮잠 환경</p></div>
+              <div class="tl-item"><time>15:00 – 16:00</time><h4>오후 간식</h4><p>개별 컨디션 확인</p></div>
+              <div class="tl-item"><time>16:00 – 19:30</time><h4>실외활동 또는 야외체험</h4><p>산책, 자연 관찰 등 바깥 경험</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">PARENTS VOICE</span>
+          <h2 class="section-title">부모님들의 <em>이야기</em></h2>
+        </div>
+        <div class="reviews__grid">
+          <article class="rcard reveal">
+            <div class="rcard__stars">★★★★★</div>
+            <blockquote>“키즈노트로 아이 하루를 꼼꼼하게 알려주셔서 안심돼요.”</blockquote>
+            <div class="rcard__who"><span class="rcard__avatar">김</span><span>0세반 학부모님</span></div>
+          </article>
+          <article class="rcard reveal" data-delay="1">
+            <div class="rcard__stars">★★★★★</div>
+            <blockquote>“수제 이유식과 식단 안내가 잘 되어 있어 먹거리 걱정이 줄었어요.”</blockquote>
+            <div class="rcard__who"><span class="rcard__avatar" style="background:var(--gold)">박</span><span>0세반 학부모님</span></div>
+          </article>
+          <article class="rcard reveal" data-delay="2">
+            <div class="rcard__stars">★★★★★</div>
+            <blockquote>“교구 활동과 야외체험이 함께 있어 아이가 즐겁게 다니고 있어요.”</blockquote>
+            <div class="rcard__who"><span class="rcard__avatar" style="background:var(--sage-deep)">최</span><span>1세반 학부모님</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__brand">🌿 이현웰가어린이집</div>
+      <p>경남 진주시 진주대로 1319 관리동, 이현하이클래스웰가</p>
+      <p>전화 <a href="tel:0507-1454-5003" data-config="tel" style="text-decoration:underline;text-underline-offset:3px">0507-1454-5003</a> · 평일 07:30~19:30 · 0~1세 영아 전문 · 2008년 개원</p>
+      <div class="footer__meta">
+        <span>© 2026 이현웰가어린이집. All rights reserved.</span>
+        <span>랜딩페이지 기획/제작: 짓마케팅</span>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="bottombar" aria-label="빠른 상담 메뉴">
+    <a href="tel:0507-1454-5003" class="bottombar__tel" data-config="tel"><span class="e">📞</span>전화</a>
+    <a href="https://pf.kakao.com/_AjTwX/chat" class="bottombar__kakao" data-config="kakao" target="_blank" rel="noopener"><span class="e">💬</span>카톡상담</a>
+    <a href="./contact.html#location" class="bottombar__map"><span class="e">📍</span>오시는길</a>
+  </nav>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>

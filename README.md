@@ -6,8 +6,13 @@
 ## 파일 구조
 
 ```
-├── index.html          # 메인 랜딩페이지
-├── menu-july.html      # 이달의 식단표 (임시 페이지)
+├── index.html          # 짧은 메인 랜딩페이지
+├── about.html          # 어린이집 소개 / 공간 / 위생
+├── program.html        # 보육 프로그램 / 오감놀이 / 야외체험
+├── activity-watermelon.html # 수박 오감놀이와 물놀이 활동소식
+├── daily.html          # 하루일과 / 키즈노트 / 후기
+├── contact.html        # 입소상담 / 오시는 길
+├── menu-july.html      # 이달의 식단표
 ├── css/style.css       # 전체 스타일 (컬러 토큰은 :root 에서 관리)
 ├── js/main.js          # 설정(SITE_CONFIG) + 인터랙션
 └── assets/
@@ -40,6 +45,7 @@
 | 공간 카드: 등하원 공간 | space-entrance.jpg |
 | 프로그램(교구 뇌활동교육) 섹션 | montessori.jpg |
 | 체험활동 섹션 | experience.jpg (사물놀이 공연) |
+| 활동소식: 수박 오감놀이와 물놀이 | watermelon-play/ |
 
 아직 임시 이미지(Unsplash)인 곳 — 실제 사진 확보 시 `<img src>` 교체:
 
@@ -56,7 +62,7 @@
 
 현재 placeholder QR 이미지입니다.
 카카오채널 생성 후 QR 이미지를 `assets/images/kakao-qr.png` 로 저장하고
-`index.html` 의 QR `<img src>` 를 교체하세요.
+`contact.html` 의 QR `<img src>` 를 교체하세요.
 
 ### 4. 지도 — 오시는 길 섹션
 
@@ -65,12 +71,12 @@
 
 한국 사용자에게 더 친숙한 카카오맵으로 바꾸려면:
 map.kakao.com 에서 장소 검색 → 공유 → **지도 퍼가기** 코드 발급 후
-`index.html` 의 `.map-frame` 안 `<iframe>` 을 교체하세요. (역시 무료)
+`contact.html` 의 `.map-frame` 안 `<iframe>` 을 교체하세요. (역시 무료)
 
 ### 5. 기타
 
-- **하루일과 시간표**: 기본 예시입니다. 실제 운영 일과에 맞춰 `index.html` 의 하루일과 섹션 수정
-- **부모님 후기**: 임시 예시입니다. **실제 후기 확보 후 교체 필요** (index.html 주석 참고)
+- **하루일과 시간표**: 기본 예시입니다. 실제 운영 일과에 맞춰 `daily.html` 의 하루일과 섹션 수정
+- **부모님 후기**: 임시 예시입니다. **실제 후기 확보 후 교체 필요** (`daily.html` 참고)
 - **OG 태그**: 배포 후 `index.html` `<head>` 의 `og:url`, `og:image` 를 실제 주소로 교체
 
 ## 🚀 GitHub Pages 배포 방법

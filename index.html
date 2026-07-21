@@ -51,20 +51,18 @@
        ============================================================ -->
   <header class="header" id="header">
     <div class="container header__inner">
-      <a href="#" class="logo" aria-label="이현웰가어린이집 홈">
+      <a href="./index.html" class="logo" aria-label="이현웰가어린이집 홈">
         <span class="logo__mark">🌿</span>
         <span>이현웰가어린이집<span class="logo__sub">JINJU · 0-1세 전문</span></span>
       </a>
 
       <nav class="nav" aria-label="주요 메뉴">
-        <a href="#about">소개</a>
-        <a href="#features">보육특징</a>
-        <a href="#program">프로그램</a>
-        <a href="#activity">활동소식</a>
-        <a href="#schedule">하루일과</a>
+        <a href="./about.html">소개</a>
+        <a href="./program.html">프로그램</a>
+        <a href="./activity-watermelon.html">활동소식</a>
+        <a href="./daily.html">하루일과</a>
         <a href="./menu-july.html">식단안내</a>
-        <a href="#consult">입소상담</a>
-        <a href="#location">오시는길</a>
+        <a href="./contact.html">입소상담</a>
       </nav>
 
       <a href="tel:0507-1454-5003" class="btn btn--phone header__cta" data-config="tel">
@@ -79,14 +77,12 @@
 
   <!-- 모바일 메뉴 -->
   <nav class="mobile-menu" id="mobileMenu" aria-label="모바일 메뉴">
-    <a href="#about">소개</a>
-    <a href="#features">보육특징</a>
-    <a href="#program">프로그램</a>
-    <a href="#activity">활동소식</a>
-    <a href="#schedule">하루일과</a>
+    <a href="./about.html">소개</a>
+    <a href="./program.html">프로그램</a>
+    <a href="./activity-watermelon.html">활동소식</a>
+    <a href="./daily.html">하루일과</a>
     <a href="./menu-july.html">식단안내</a>
-    <a href="#consult">입소상담</a>
-    <a href="#location">오시는길</a>
+    <a href="./contact.html">입소상담</a>
     <a href="tel:0507-1454-5003" class="btn btn--phone" data-config="tel">📞 전화 상담하기</a>
   </nav>
 
@@ -139,670 +135,75 @@
       </div>
     </section>
 
-    <!-- ============================================================
-         3. 신뢰 포인트 카드 섹션 (보육특징)
-         ============================================================ -->
-    <section class="trust" id="features">
+    <section class="home-essentials">
       <div class="container">
         <div class="section-head section-head--center reveal">
-          <span class="eyebrow">TRUST POINTS</span>
-          <h2 class="section-title">
-            부모님이 안심할 수 있도록,<br />
-            아이의 하루를 <em>세심하게</em> 준비합니다
-          </h2>
+          <span class="eyebrow">QUICK GUIDE</span>
+          <h2 class="section-title">처음 오신 부모님께<br /><em>꼭 필요한 정보만</em> 먼저 보여드려요</h2>
+          <p class="section-desc">
+            자세한 설명은 페이지별로 나누고, 홈에서는 상담 전 바로 확인하면 좋은 내용만 모았습니다.
+          </p>
         </div>
 
-        <div class="trust__grid">
-          <article class="tcard reveal">
-            <div class="tcard__ico">👶</div>
-            <h3>0~1세 전문 보육</h3>
-            <p>영아기 발달과 생활 리듬을 이해하고, 연령별 특성에 맞춘 돌봄을 제공합니다.</p>
-          </article>
-          <article class="tcard reveal" data-delay="1">
-            <div class="tcard__ico">🏡</div>
-            <h3>80평 넓은 공간</h3>
-            <p>아이들이 답답하지 않게 움직이고 탐색할 수 있는 넓고 쾌적한 공간을 갖추고 있습니다.</p>
-          </article>
-          <article class="tcard reveal" data-delay="2">
-            <div class="tcard__ico">📱</div>
-            <h3>키즈노트 소통</h3>
-            <p>식사, 낮잠, 배변, 컨디션, 활동사진까지 아이의 하루를 꼼꼼하게 공유합니다.</p>
-          </article>
-          <article class="tcard reveal">
-            <div class="tcard__ico">🧩</div>
-            <h3>교구 뇌활동교육 · 오감놀이</h3>
-            <p>교구를 만지고 조작하며 두뇌와 집중력을 키우고, 자연물 오감놀이로 감각을 깨웁니다.</p>
-          </article>
-          <article class="tcard reveal" data-delay="1">
-            <div class="tcard__ico">🍃</div>
-            <h3>야외체험활동</h3>
-            <p>벚꽃과 야생화가 피는 단지 안 자연에서 신발만 신고 나서면 자연관찰과 숲체험이 시작됩니다.</p>
-          </article>
-          <article class="tcard reveal" data-delay="2">
-            <div class="tcard__ico">🥣</div>
-            <h3>수제 이유식</h3>
-            <p>조리사가 직접 만든 이유식과 점심, 오전·오후 간식으로 건강한 식습관을 돕습니다.</p>
-          </article>
+        <div class="home-link-grid">
+          <a class="home-link-card reveal" href="./about.html">
+            <span class="home-link-card__ico">🏡</span>
+            <h3>어린이집 소개</h3>
+            <p>0~1세 전문 보육, 80평 공간, 위생 관리와 원 소개</p>
+          </a>
+          <a class="home-link-card reveal" data-delay="1" href="./program.html">
+            <span class="home-link-card__ico">🧠</span>
+            <h3>보육 프로그램</h3>
+            <p>교구 뇌활동교육, 자연물 오감놀이, 야외체험활동</p>
+          </a>
+          <a class="home-link-card reveal" data-delay="2" href="./daily.html">
+            <span class="home-link-card__ico">🕘</span>
+            <h3>하루일과</h3>
+            <p>0세와 1세의 하루 흐름, 키즈노트 소통 방식</p>
+          </a>
+          <a class="home-link-card reveal" data-delay="3" href="./menu-july.html">
+            <span class="home-link-card__ico">🍚</span>
+            <h3>식단 안내</h3>
+            <p>0세 이유식과 1세 이상 식단을 월별로 확인</p>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================
-         4. 원장 인사말 섹션 (소개)
-         ============================================================ -->
-    <section class="greeting" id="about">
-      <div class="container greeting__inner">
-        <div class="greeting__visual reveal">
-          <span class="greeting__quote-mark">“</span>
-          <div class="greeting__img-frame">
-            <!-- [이미지 교체 2] 원장 인사말: 선생님이 아이를 돌보는 따뜻한 이미지 -->
-            <figure class="ph" data-label="원장 인사말 이미지 영역">
-              <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=70"
-                   alt="선생님이 아이와 함께 책을 읽으며 돌보는 모습" loading="lazy"
-                   onerror="this.remove()" />
-            </figure>
-          </div>
-        </div>
-
-        <div class="greeting__body reveal" data-delay="1">
-          <span class="eyebrow">GREETING</span>
-          <h2 class="section-title">아이의 속도를 존중하는<br /><em>따뜻한 보육</em></h2>
-
-          <p class="lead">안녕하세요. 이현웰가어린이집입니다.</p>
-          <p>
-            영아기 아이들에게 가장 중요한 것은
-            안전한 환경, 안정적인 애착, 그리고 아이의 발달 속도를 존중하는 세심한 돌봄입니다.
-          </p>
-          <p>
-            이현웰가어린이집은 0세부터 1세까지의 아이들이
-            편안하게 적응하고, 즐겁게 놀이하며, 스스로 탐색하는 힘을 키울 수 있도록
-            하루하루를 정성스럽게 준비하고 있습니다.
-          </p>
-          <p>
-            넓고 쾌적한 공간, 교구 뇌활동교육과 오감놀이, 야외체험활동, 수제 이유식,
-            그리고 키즈노트를 통한 꼼꼼한 소통으로
-            부모님께는 안심을, 아이에게는 따뜻한 성장을 전하겠습니다.
-          </p>
-          <div class="greeting__sign">이현웰가어린이집 원장 드림</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         5. 왜 이현웰가어린이집인가 — 통계/키워드 박스
-         ============================================================ -->
-    <section class="why">
-      <div class="container">
-        <div class="section-head section-head--center reveal">
-          <span class="eyebrow">WHY US</span>
-          <h2 class="section-title">왜 <strong>이현웰가어린이집</strong>일까요?</h2>
-        </div>
-
-        <div class="why__grid">
-          <div class="stat reveal"><div class="stat__num">0~1세</div><div class="stat__label">영아 전문 보육</div></div>
-          <div class="stat reveal" data-delay="1"><div class="stat__num brown">80평</div><div class="stat__label">넓고 쾌적한 규모</div></div>
-          <div class="stat reveal" data-delay="2"><div class="stat__num">2008년</div><div class="stat__label">개원, 오랜 보육 경험</div></div>
-          <div class="stat reveal" data-delay="3"><div class="stat__num brown">키즈노트</div><div class="stat__label">매일 꼼꼼한 소통</div></div>
-          <div class="stat reveal"><div class="stat__num">뇌활동교육</div><div class="stat__label">교구 활용 두뇌 발달</div></div>
-          <div class="stat reveal" data-delay="1"><div class="stat__num brown">수제</div><div class="stat__label">조리사가 직접 만든 이유식</div></div>
-          <div class="stat reveal" data-delay="2"><div class="stat__num">야외체험</div><div class="stat__label">계절·자연 활동</div></div>
-          <div class="stat reveal" data-delay="3"><div class="stat__num brown">통학차량</div><div class="stat__label">안전한 등하원 운영</div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         6. 80평 공간 소개 섹션
-         ============================================================ -->
-    <section class="space">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">SPACE</span>
-          <h2 class="section-title">
-            영아가 편안하게 머무는<br />
-            넓고 따뜻한 <em>80평 공간</em>
-          </h2>
+    <section class="home-activity">
+      <div class="container home-activity__inner">
+        <figure class="home-activity__media reveal">
+          <img src="./assets/images/watermelon-play/watermelon-cover.jpg"
+               alt="수박 오감놀이와 수박 물놀이 활동 대표 이미지" loading="lazy" />
+        </figure>
+        <div class="home-activity__body reveal" data-delay="1">
+          <span class="eyebrow">LATEST STORY</span>
+          <h2 class="section-title">수박 오감놀이와<br /><em>시원한 물놀이</em></h2>
           <p class="section-desc">
-            아이들은 공간 안에서 움직이고, 만지고, 탐색하며 성장합니다.
-            이현웰가어린이집은 영아들이 안전하게 활동할 수 있도록
-            넓고 쾌적한 환경을 바탕으로 하루를 운영합니다.
+            차가운 수박을 만지고 맛보며 감각을 깨우고, 물놀이 매트 위에서
+            친구들과 여름을 즐겁게 보낸 활동 사진을 따로 정리했습니다.
           </p>
-        </div>
-
-        <div class="space__hero-img reveal">
-          <!-- 실제 원 사진 (보정 완료) -->
-          <figure class="ph" data-label="넓고 밝은 실내 공간 이미지 영역">
-            <img src="./assets/images/space-main.jpg"
-                 alt="이현웰가어린이집의 넓고 밝은 실내 전경" loading="lazy"
-                 onerror="this.remove()" />
-          </figure>
-        </div>
-
-        <!-- 공간 카드 6개 — 실제 사진 준비 시 각 카드의 .ph 안에
-             <img src="./assets/images/space-놀이공간.jpg" alt="..."> 형태로 넣어주세요. -->
-        <div class="space__grid">
-          <article class="scard reveal">
-            <div class="scard__img"><figure class="ph" data-emoji="🧸">
-              <img src="./assets/images/space-play.jpg" alt="볼풀과 놀이매트가 준비된 넓은 놀이공간" loading="lazy" onerror="this.remove()" />
-            </figure></div>
-            <div class="scard__body"><h3>놀이공간</h3><p>마음껏 움직이며 노는 넓은 놀이 영역</p></div>
-          </article>
-          <article class="scard reveal" data-delay="1">
-            <div class="scard__img"><figure class="ph" data-emoji="🧩">
-              <img src="./assets/images/space-montessori.jpg" alt="교구장과 책이 정돈된 교구 활동공간" loading="lazy" onerror="this.remove()" />
-            </figure></div>
-            <div class="scard__body"><h3>교구 활동공간</h3><p>교구 탐색과 집중 활동이 이루어지는 공간</p></div>
-          </article>
-          <article class="scard reveal" data-delay="2">
-            <div class="scard__img"><figure class="ph" data-emoji="🍽️"></figure></div>
-            <div class="scard__body"><h3>식사공간</h3><p>편안하고 위생적인 식사·이유식 공간</p></div>
-          </article>
-          <article class="scard reveal">
-            <div class="scard__img"><figure class="ph" data-emoji="😴"></figure></div>
-            <div class="scard__body"><h3>낮잠 및 휴식공간</h3><p>포근하게 쉴 수 있는 조용한 휴식 공간</p></div>
-          </article>
-          <article class="scard reveal" data-delay="1">
-            <div class="scard__img"><figure class="ph" data-emoji="🧼">
-              <img src="./assets/images/space-hygiene.jpg" alt="교실 안 싱크대를 갖춘 위생관리 공간" loading="lazy" onerror="this.remove()" />
-            </figure></div>
-            <div class="scard__body"><h3>위생관리 공간</h3><p>교실마다 싱크대를 갖춘 청결 관리 공간</p></div>
-          </article>
-          <article class="scard reveal" data-delay="2">
-            <div class="scard__img"><figure class="ph" data-emoji="🚸">
-              <img src="./assets/images/space-entrance.jpg" alt="미끄럼틀과 붕붕카가 있는 넓은 등하원 복도" loading="lazy" onerror="this.remove()" />
-            </figure></div>
-            <div class="scard__body"><h3>등하원 공간</h3><p>안전하게 맞이하고 배웅하는 등하원 동선</p></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         6-1. 위생·건강 관리 섹션
-         ============================================================ -->
-    <section class="hygiene">
-      <div class="container">
-        <div class="section-head section-head--center reveal">
-          <span class="eyebrow">CLEAN &amp; SAFE</span>
-          <h2 class="section-title">아이의 건강,<br /><em>위생 관리</em>부터 다릅니다</h2>
-        </div>
-
-        <div class="trust__grid">
-          <article class="tcard reveal">
-            <div class="tcard__ico">🚰</div>
-            <h3>교실마다 싱크대 완비</h3>
-            <p>모든 교실 안에 싱크대가 있어 활동 중에도 수시로 아이들의 손을 씻어줍니다.</p>
-          </article>
-          <article class="tcard reveal" data-delay="1">
-            <div class="tcard__ico">🛁</div>
-            <h3>배변 후 물 세정</h3>
-            <p>배변 후에는 물로 깨끗하게 씻겨 아이의 피부까지 청결하게 관리합니다.</p>
-          </article>
-          <article class="tcard reveal" data-delay="2">
-            <div class="tcard__ico">🛡️</div>
-            <h3>전염병 발생 0건</h3>
-            <p>철저한 위생 관리로 수족구 등 전염병이 올해도 발생하지 않았습니다. <small style="color:var(--ink-soft)">(2026년 기준)</small></p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         7. 교구 뇌활동교육 · 자연물 오감놀이 섹션 (프로그램)
-         ============================================================ -->
-    <section class="feature-split feature-split--tint" id="program">
-      <div class="container feature-split__inner">
-        <div class="feature-split__img reveal">
-          <!-- 실제 원 사진 (보정 완료) -->
-          <figure class="ph" data-label="교구 활동 이미지 영역">
-            <img src="./assets/images/montessori.jpg"
-                 alt="나무 블록 교구와 놀잇감이 준비된 활동 코너" loading="lazy"
-                 onerror="this.remove()" />
-          </figure>
-        </div>
-        <div class="reveal" data-delay="1">
-          <span class="eyebrow">PROGRAM</span>
-          <h2 class="section-title">만지고 느끼는 경험이<br /><em>아이의 두뇌</em>를 깨웁니다</h2>
-          <p class="section-desc">
-            이현웰가어린이집은 <strong>교구를 이용한 뇌활동교육</strong>으로
-            아이가 다양한 교구를 만지고 조작하며
-            두뇌 발달과 소근육, 집중력을 자연스럽게 키워갑니다.
-          </p>
-          <p class="section-desc">
-            여기에 나뭇잎, 꽃, 열매 같은 <strong>자연물을 활용한 오감놀이</strong>로
-            보고, 만지고, 냄새 맡고, 느끼며 아이의 감각을 골고루 깨워줍니다.
-          </p>
-          <ul class="chip-list">
-            <li><span class="e">🧩</span>교구 조작 놀이</li>
-            <li><span class="e">🧠</span>두뇌 발달 활동</li>
-            <li><span class="e">🖐️</span>소근육 발달</li>
-            <li><span class="e">🍃</span>자연물 탐색</li>
-            <li><span class="e">👀</span>오감 자극 놀이</li>
-            <li><span class="e">🎯</span>집중력 형성 놀이</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         8. 야외체험활동 섹션
-         ============================================================ -->
-    <section class="feature-split feature-split--reverse">
-      <div class="container feature-split__inner">
-        <div class="feature-split__img reveal">
-          <!-- 실제 원 사진 (보정 완료) — 전통 사물놀이 체험 공연 -->
-          <figure class="ph" data-label="체험활동 이미지 영역">
-            <img src="./assets/images/experience.jpg"
-                 alt="어린이집에서 열린 전통 사물놀이 체험 공연" loading="lazy"
-                 onerror="this.remove()" />
-          </figure>
-        </div>
-        <div class="reveal" data-delay="1">
-          <span class="eyebrow">OUTDOOR</span>
-          <h2 class="section-title">신발만 신고 나서면<br /><em>자연이 아이의 교실</em>이 됩니다</h2>
-          <p class="section-desc">
-            이현웰가어린이집은 이현하이클래스웰가 아파트 단지 안 관리동에 있어,
-            푸른 자연환경이 잘 가꾸어진 단지 전체가 아이들의 배움터가 됩니다.
-          </p>
-          <p class="section-desc">
-            계절마다 벚꽃나무, 수국, 야생화가 피어나고
-            도마뱀, 메뚜기, 나비, 개미 같은 작은 생명들을 만날 수 있어
-            신발만 신고 나서도 자연관찰과 숲체험이 저절로 이루어집니다.
-          </p>
-          <p class="section-desc">
-            여기에 날씨와 아이들의 컨디션을 고려한
-            산책, 야외체험, 안전교육까지 더해 아이의 경험을 넓혀줍니다.
-          </p>
-          <ul class="chip-list">
-            <li><span class="e">🌸</span>벚꽃·수국·야생화 관찰</li>
-            <li><span class="e">🦋</span>나비·메뚜기·개미 만나기</li>
-            <li><span class="e">🌳</span>단지 안 숲체험</li>
-            <li><span class="e">🍂</span>계절 산책</li>
-            <li><span class="e">🚦</span>교통안전 교육</li>
-            <li><span class="e">👐</span>오감 체험놀이</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         9. 활동소식 — 수박 오감놀이와 물놀이
-         ============================================================ -->
-    <section class="activity-story" id="activity">
-      <div class="container">
-        <div class="section-head section-head--center reveal">
-          <span class="eyebrow">WELLGA STORY</span>
-          <h2 class="section-title">수박 향기 가득한<br /><em>오감놀이와 물놀이</em></h2>
-          <p class="section-desc">
-            차가운 수박을 보고, 만지고, 맛보며 감각을 깨우고
-            시원한 물줄기 아래에서 여름을 온몸으로 느껴본 하루입니다.
-          </p>
-        </div>
-
-        <article class="activity-feature reveal">
-          <figure class="activity-feature__media">
-            <img src="./assets/images/watermelon-play/watermelon-cover.jpg"
-                 alt="이현웰가어린이집 수박 오감놀이와 수박 물놀이 활동 소개" loading="lazy" />
-          </figure>
-
-          <div class="activity-feature__body">
-            <p class="activity-date">2026.07 · 여름 오감놀이</p>
-            <h3>동그란 수박 하나로 시작된 웃음 가득한 탐색 시간</h3>
-            <p>
-              아이들은 초록 줄무늬 수박을 눈으로 살펴보고, 손으로 두드려보고,
-              시원한 수박 조각을 맛보며 여름 과일을 자연스럽게 경험했습니다.
-            </p>
-            <p>
-              이어진 물놀이 시간에는 물줄기를 손으로 잡아보고, 물 위에 뜬 수박을
-              함께 굴려보며 친구들과 안전하고 즐겁게 놀이했습니다.
-            </p>
-            <ul class="activity-points">
-              <li><span>탐색</span>색, 모양, 무게를 살펴보는 감각 놀이</li>
-              <li><span>맛보기</span>입으로 느껴보는 달콤한 여름 과일</li>
-              <li><span>물놀이</span>시원한 물줄기와 함께하는 대근육 놀이</li>
-              <li><span>사회성</span>친구와 차례를 기다리고 함께 웃는 시간</li>
-            </ul>
-          </div>
-        </article>
-
-        <div class="activity-flow reveal">
-          <div class="activity-step">
-            <span class="activity-step__num">01</span>
-            <h3>수박을 살펴봐요</h3>
-            <p>동그란 모양, 초록 줄무늬, 묵직한 느낌을 손끝으로 천천히 탐색했습니다.</p>
-          </div>
-          <div class="activity-step">
-            <span class="activity-step__num">02</span>
-            <h3>달콤하게 맛봐요</h3>
-            <p>아이의 속도에 맞춰 한 입씩 맛보며 색과 향, 식감을 자연스럽게 느꼈습니다.</p>
-          </div>
-          <div class="activity-step">
-            <span class="activity-step__num">03</span>
-            <h3>시원하게 놀아요</h3>
-            <p>물놀이 매트 위에서 물을 만지고 튀기며 더운 여름을 즐겁게 보냈습니다.</p>
-          </div>
-        </div>
-
-        <div class="activity-gallery reveal" aria-label="수박 오감놀이와 물놀이 사진 모음">
-          <figure class="activity-gallery__item activity-gallery__item--wide">
-            <img src="./assets/images/watermelon-play/watermelon-gallery-01.jpg" alt="아이들이 물놀이 매트 위에서 수박과 함께 놀이하는 모습" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="activity-gallery__item">
-            <img src="./assets/images/watermelon-play/watermelon-gallery-02.jpg" alt="아이가 물놀이 중 물뿌리개를 탐색하는 모습" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="activity-gallery__item">
-            <img src="./assets/images/watermelon-play/watermelon-gallery-03.jpg" alt="친구들과 함께 물줄기를 바라보며 놀이하는 모습" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="activity-gallery__item">
-            <img src="./assets/images/watermelon-play/watermelon-gallery-04.jpg" alt="수박 물놀이 중 물줄기를 손으로 느껴보는 모습" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="activity-gallery__item">
-            <img src="./assets/images/watermelon-play/watermelon-gallery-05.jpg" alt="물놀이 도구를 만지며 물을 탐색하는 아이들" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="activity-gallery__item">
-            <img src="./assets/images/watermelon-play/watermelon-gallery-06.jpg" alt="물놀이 매트 위에서 선생님과 함께 놀이하는 아이들" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="activity-gallery__item">
-            <img src="./assets/images/watermelon-play/watermelon-gallery-07.jpg" alt="물놀이 공간에서 친구들과 함께 서 있는 아이들" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="activity-gallery__item activity-gallery__item--wide">
-            <img src="./assets/images/watermelon-play/watermelon-gallery-08.jpg" alt="이현웰가어린이집 앞 여름 물놀이 공간" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="activity-gallery__item">
-            <img src="./assets/images/watermelon-play/watermelon-gallery-09.jpg" alt="아이가 수박 조각을 손에 들고 살펴보는 모습" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="activity-gallery__item">
-            <img src="./assets/images/watermelon-play/watermelon-gallery-10.jpg" alt="아이가 수박 조각을 맛보는 모습" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="activity-gallery__item">
-            <img src="./assets/images/watermelon-play/watermelon-gallery-11.jpg" alt="수박 오감놀이 중 활짝 웃는 아이" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="activity-gallery__item">
-            <img src="./assets/images/watermelon-play/watermelon-gallery-12.jpg" alt="아이가 양손으로 수박을 들고 맛보는 모습" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="activity-gallery__item">
-            <img src="./assets/images/watermelon-play/watermelon-gallery-13.jpg" alt="수박 놀이 후 즐거워하는 아이" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="activity-gallery__item">
-            <img src="./assets/images/watermelon-play/watermelon-gallery-14.jpg" alt="아이가 수박 조각을 들고 바라보는 모습" loading="lazy" decoding="async" />
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         10. 수제 이유식 / 식단 안내 섹션
-         ============================================================ -->
-    <section class="feature-split feature-split--tint" id="menu">
-      <div class="container feature-split__inner">
-        <div class="feature-split__img reveal">
-          <!-- [이미지 교체 4] 수제 이유식: 건강한 이유식, 신선한 재료 -->
-          <figure class="ph" data-label="수제 이유식 이미지 영역">
-            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=70"
-                 alt="신선한 재료로 정성껏 준비한 건강한 식사" loading="lazy"
-                 onerror="this.remove()" />
-          </figure>
-        </div>
-        <div class="reveal" data-delay="1">
-          <span class="eyebrow">FOOD & MENU</span>
-          <h2 class="section-title">아이의 입에 들어가는 것까지<br /><em>정성스럽게</em> 준비합니다</h2>
-          <p class="section-desc">
-            이현웰가어린이집의 먹거리는 <strong>조리사 선생님이 원에서 직접</strong> 만듭니다.
-            아이의 성장 단계에 맞춘 이유식부터 점심, 오전·오후 간식까지
-            하루 네 번의 식사를 정성껏 준비합니다.
-          </p>
-          <p class="section-desc">
-            부모님이 안심하실 수 있도록 식단 안내와 식사 기록을 꼼꼼하게 공유하며,
-            아이의 컨디션과 알레르기 여부도 세심하게 살핍니다.
-          </p>
-          <ul class="chip-list">
-            <li><span class="e">🥣</span>조리사가 직접 만든 이유식</li>
-            <li><span class="e">🍎</span>오전 간식</li>
-            <li><span class="e">🍚</span>점심 식사</li>
-            <li><span class="e">🍪</span>오후 간식</li>
-          </ul>
-
           <div class="hero__actions">
-            <!-- 식단표 링크: js/main.js 의 SITE_CONFIG.menuUrl 에서 수정
-                 임시: ./menu-july.html
-                 PDF 사용 시: ./assets/menu/2026-07-menu.pdf 로 교체 -->
-            <a href="./menu-july.html#babyMenu" class="btn btn--brown">🗓️ 0세 이유식 보기</a>
-            <a href="./menu-july.html#generalMenu" class="btn btn--ghost">🍚 1세 이상 식단 보기</a>
-          </div>
-
-          <div class="menu-note">
-            <p>※ 식단은 원 사정과 식재료 수급 상황에 따라 변경될 수 있습니다.</p>
-            <p>※ 알레르기 및 개별 식이 상담은 입소 상담 시 안내드립니다.</p>
+            <a href="./activity-watermelon.html" class="btn btn--brown">🍉 활동 사진 보기</a>
+            <a href="./program.html" class="btn btn--ghost">프로그램 보기</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================
-         11. 키즈노트 소통 섹션
-         ============================================================ -->
-    <section class="kidsnote feature-split">
-      <div class="container feature-split__inner">
-        <div class="feature-split__img reveal">
-          <!-- [이미지 교체 6] 키즈노트: 스마트폰 알림, 부모 소통, 기록 -->
-          <figure class="ph" data-label="키즈노트 소통 이미지 영역">
-            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&q=70"
-                 alt="스마트폰으로 아이의 하루 기록을 확인하는 모습" loading="lazy"
-                 onerror="this.remove()" />
-          </figure>
-        </div>
-        <div class="reveal" data-delay="1">
-          <span class="eyebrow">KIDSNOTE</span>
-          <h2 class="section-title">아이의 하루를<br />부모님께 <em>꼼꼼하게</em> 전합니다</h2>
+    <section class="home-consult">
+      <div class="container home-consult__inner reveal">
+        <div>
+          <span class="eyebrow">CONSULTING</span>
+          <h2 class="section-title">입소 상담과 위치 안내는<br /><em>한 페이지에서</em> 확인하세요</h2>
           <p class="section-desc">
-            말로 다 표현하기 어려운 영아기 아이들의 하루를
-            키즈노트를 통해 세심하게 기록하고 공유합니다.
-          </p>
-
-          <div class="kidsnote__items">
-            <div class="kn-item"><span class="e">🍚</span>식사량</div>
-            <div class="kn-item"><span class="e">😴</span>낮잠 시간</div>
-            <div class="kn-item"><span class="e">🚼</span>배변 상태</div>
-            <div class="kn-item"><span class="e">🌡️</span>컨디션</div>
-            <div class="kn-item"><span class="e">🧸</span>놀이활동</div>
-            <div class="kn-item"><span class="e">📷</span>사진 기록</div>
-            <div class="kn-item"><span class="e">📢</span>공지사항</div>
-          </div>
-
-          <div class="kidsnote__highlight">
-            직장에서도, 집에서도 — 부모님이 계신 곳 어디서든
-            우리 아이의 하루를 실시간으로 확인하실 수 있습니다.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         12. 하루일과 섹션 — 연령별 탭 + 타임라인
-         ※ 시간표는 기본 예시이며, 실제 운영 일과에 맞춰 수정하세요.
-         ============================================================ -->
-    <section class="schedule" id="schedule">
-      <div class="container">
-        <div class="section-head section-head--center reveal">
-          <span class="eyebrow">DAILY ROUTINE</span>
-          <h2 class="section-title">연령과 발달에 맞춘 <em>하루일과</em></h2>
-          <p class="section-desc">아이의 리듬을 존중하는 하루 흐름을 소개합니다.</p>
-        </div>
-
-        <div class="tabs reveal" role="tablist" aria-label="연령별 하루일과">
-          <button class="tab-btn active" role="tab" aria-selected="true" data-tab="age0">0세</button>
-          <button class="tab-btn" role="tab" aria-selected="false" data-tab="age1">1세</button>
-        </div>
-
-        <!-- 0세 -->
-        <div class="tab-panel active" id="age0" role="tabpanel">
-          <div class="timeline">
-            <div class="tl-item"><time>07:30 – 09:30</time><h4>등원 및 건강상태 확인</h4><p>반갑게 맞이하며 컨디션을 살핍니다</p></div>
-            <div class="tl-item"><time>09:30 – 10:00</time><h4>오전 간식 / 이유식</h4><p>성장 단계에 맞춘 수제 이유식</p></div>
-            <div class="tl-item"><time>10:00 – 11:00</time><h4>감각놀이 및 자유놀이</h4><p>오감을 자극하는 영아 맞춤 놀이</p></div>
-            <div class="tl-item"><time>11:00 – 11:40</time><h4>산책 또는 실내활동</h4><p>날씨와 컨디션에 따라 유연하게 운영</p></div>
-            <div class="tl-item"><time>11:40 – 12:30</time><h4>점심 및 수유</h4><p>아이별 식사·수유 리듬 존중</p></div>
-            <div class="tl-item"><time>12:30 – 15:00</time><h4>낮잠 및 휴식</h4><p>포근한 환경에서 충분한 휴식</p></div>
-            <div class="tl-item"><time>15:00 – 16:00</time><h4>오후 간식 및 놀이</h4><p>가벼운 간식 후 여유로운 놀이</p></div>
-            <div class="tl-item"><time>16:00 – 19:30</time><h4>하원 및 연장보육</h4><p>안전하게 하원 지도, 연장보육 운영</p></div>
-          </div>
-        </div>
-
-        <!-- 1세 -->
-        <div class="tab-panel" id="age1" role="tabpanel">
-          <div class="timeline">
-            <div class="tl-item"><time>등원</time><h4>등원 및 자유놀이</h4><p>편안한 아침맞이와 자유로운 놀이</p></div>
-            <div class="tl-item"><time>오전</time><h4>오전 간식</h4><p>건강한 간식으로 하루 에너지 충전</p></div>
-            <div class="tl-item"><time>오전</time><h4>교구 뇌활동교육</h4><p>교구 탐색과 집중 활동</p></div>
-            <div class="tl-item"><time>오전</time><h4>실외활동 또는 야외체험</h4><p>산책·자연 관찰 등 바깥 경험</p></div>
-            <div class="tl-item"><time>점심</time><h4>점심 식사</h4><p>골고루 먹는 습관 지도</p></div>
-            <div class="tl-item"><time>오후</time><h4>낮잠</h4><p>조용하고 아늑한 환경에서 휴식</p></div>
-            <div class="tl-item"><time>오후</time><h4>오후 간식</h4><p>기분 좋은 오후 간식 시간</p></div>
-            <div class="tl-item"><time>하원</time><h4>오후 놀이 및 하원</h4><p>여유로운 놀이 후 안전한 하원</p></div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ============================================================
-         13. 부모님 후기 섹션
-         ※ 아래 후기는 임시 예시입니다. 실제 후기 확보 후 교체 필요!
-         ============================================================ -->
-    <section class="reviews">
-      <div class="container">
-        <div class="section-head section-head--center reveal">
-          <span class="eyebrow">REVIEWS</span>
-          <h2 class="section-title">부모님들의 <em>이야기</em></h2>
-        </div>
-
-        <div class="reviews__grid">
-          <!-- 실제 후기 확보 후 교체 필요 -->
-          <article class="rcard reveal">
-            <div class="rcard__stars">★★★★★</div>
-            <blockquote>“키즈노트로 아이 하루를 꼼꼼하게 알려주셔서 안심돼요.”</blockquote>
-            <div class="rcard__who">
-              <span class="rcard__avatar" style="background:var(--sage)">김</span>
-              <span>0세반 학부모님</span>
-            </div>
-          </article>
-          <article class="rcard reveal" data-delay="1">
-            <div class="rcard__stars">★★★★★</div>
-            <blockquote>“공간이 넓고 밝아서 아이가 답답하지 않게 지내는 느낌이에요.”</blockquote>
-            <div class="rcard__who">
-              <span class="rcard__avatar" style="background:var(--brown)">이</span>
-              <span>1세반 학부모님</span>
-            </div>
-          </article>
-          <article class="rcard reveal" data-delay="2">
-            <div class="rcard__stars">★★★★★</div>
-            <blockquote>“수제 이유식과 식단 안내가 잘 되어 있어 먹거리 걱정이 줄었어요.”</blockquote>
-            <div class="rcard__who">
-              <span class="rcard__avatar" style="background:var(--gold)">박</span>
-              <span>0세반 학부모님</span>
-            </div>
-          </article>
-          <article class="rcard reveal" data-delay="3">
-            <div class="rcard__stars">★★★★★</div>
-            <blockquote>“교구 활동과 야외체험이 함께 있어 아이가 즐겁게 다니고 있어요.”</blockquote>
-            <div class="rcard__who">
-              <span class="rcard__avatar" style="background:var(--sage-deep)">최</span>
-              <span>1세반 학부모님</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         14. 입소상담 CTA 섹션
-         ============================================================ -->
-    <section class="cta" id="consult">
-      <div class="container">
-        <div class="section-head section-head--center reveal">
-          <span class="eyebrow" style="color:#D8E4CF">CONSULTING</span>
-          <h2 class="section-title">
-            우리 아이에게 맞는 어린이집인지<br />
-            편하게 상담 받아보세요
-          </h2>
-          <p class="section-desc">
-            0세~1세 영아기의 어린이집 선택은
-            아이의 첫 사회생활을 결정하는 중요한 시작입니다.<br /><br />
-            이현웰가어린이집의 공간, 일과, 식단, 교육, 입소 가능 여부를
-            상담을 통해 자세히 안내해드립니다.
+            전화, 카카오톡 상담, 오시는 길, 운영 정보를 상담 페이지에 모았습니다.
           </p>
         </div>
-
-        <div class="cta__actions reveal">
+        <div class="home-consult__actions">
           <a href="tel:0507-1454-5003" class="btn btn--phone" data-config="tel">📞 전화 상담하기</a>
-          <!-- 카카오톡 채널 링크는 js/main.js 의 SITE_CONFIG.kakao 에서 일괄 관리 -->
           <a href="https://pf.kakao.com/_AjTwX/chat" class="btn btn--kakao" data-config="kakao" target="_blank" rel="noopener">💬 카카오톡 상담하기</a>
-          <a href="#location" class="btn btn--ghost">📍 오시는 길 보기</a>
-        </div>
-
-        <!-- 카카오채널 QR (https://pf.kakao.com/_AjTwX/chat 연결) -->
-        <div class="cta__qr reveal" data-delay="1">
-          <div class="cta__qr-img">
-            <img src="./assets/images/kakao-qr.png" alt="이현웰가어린이집 카카오톡 채널 상담 QR 코드"
-                 loading="lazy" onerror="this.replaceWith('QR')" />
-          </div>
-          <div class="cta__qr-txt">
-            <h4>카카오톡 채널 QR</h4>
-            <p>카메라로 QR을 스캔하면 카카오톡 1:1 상담으로 바로 연결됩니다.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         15. 오시는 길 섹션
-         ============================================================ -->
-    <section class="location" id="location">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">LOCATION</span>
-          <h2 class="section-title">오시는 길</h2>
-        </div>
-
-        <div class="location__inner">
-          <div class="location__map reveal">
-            <!-- 무료 구글 지도 임베드 (API 키·가입 불필요)
-                 카카오맵 퍼가기 코드를 발급받으면(map.kakao.com → 공유 → 지도 퍼가기)
-                 아래 iframe 만 교체하세요. -->
-            <div class="map-frame">
-              <iframe
-                src="https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1z6rK964KoIOynhOyjvOyLnCDsp4Tso7zrjIDroZwgMTMxOQ!6i17!3m1!1sko!5m1!1sko"
-                title="이현웰가어린이집 위치 지도" loading="lazy" allowfullscreen
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="map-actions">
-              <a href="https://map.kakao.com/?q=%EA%B2%BD%EB%82%A8%20%EC%A7%84%EC%A3%BC%EC%8B%9C%20%EC%A7%84%EC%A3%BC%EB%8C%80%EB%A1%9C%201319" target="_blank" rel="noopener" data-config="kakaomap">🗺️ 카카오맵에서 보기</a>
-              <a href="https://map.naver.com/p/search/%EC%9D%B4%ED%98%84%EC%9B%B0%EA%B0%80%EC%96%B4%EB%A6%B0%EC%9D%B4%EC%A7%91" target="_blank" rel="noopener" data-config="navermap">🧭 네이버지도에서 보기</a>
-            </div>
-          </div>
-
-          <div class="loc-info reveal" data-delay="1">
-            <div class="loc-info__item">
-              <span class="e">🏠</span>
-              <div><h4>주소</h4><p>경남 진주시 진주대로 1319 관리동<br />이현하이클래스웰가</p></div>
-            </div>
-            <div class="loc-info__item">
-              <span class="e">📞</span>
-              <div><h4>전화</h4><p><a href="tel:0507-1454-5003" data-config="tel">0507-1454-5003</a></p></div>
-            </div>
-            <div class="loc-info__item">
-              <span class="e">🕐</span>
-              <div><h4>운영시간</h4><p>평일 07:30 ~ 19:30</p></div>
-            </div>
-            <div class="loc-info__item">
-              <span class="e">🚌</span>
-              <div><h4>통학차량</h4><p>안전한 등하원 차량 운영</p></div>
-            </div>
-            <div class="loc-notice">
-              방문 상담은 원 운영 상황에 따라 조율이 필요할 수 있으니
-              전화 또는 카카오톡으로 먼저 문의해 주세요.
-            </div>
-          </div>
+          <a href="./contact.html" class="btn btn--ghost">📍 상담·오시는 길</a>
         </div>
       </div>
     </section>
@@ -831,7 +232,7 @@
     <a href="tel:0507-1454-5003" class="bottombar__tel" data-config="tel"><span class="e">📞</span>전화</a>
     <!-- 카카오톡 채널 링크는 js/main.js 의 SITE_CONFIG.kakao 에서 일괄 관리 -->
     <a href="https://pf.kakao.com/_AjTwX/chat" class="bottombar__kakao" data-config="kakao" target="_blank" rel="noopener"><span class="e">💬</span>카톡상담</a>
-    <a href="#location" class="bottombar__map"><span class="e">📍</span>오시는길</a>
+    <a href="./contact.html#location" class="bottombar__map"><span class="e">📍</span>오시는길</a>
   </nav>
 
   <script src="./js/main.js"></script>
