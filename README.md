@@ -9,7 +9,8 @@
 ├── index.html          # 짧은 메인 랜딩페이지
 ├── about.html          # 어린이집 소개 / 공간 / 위생
 ├── program.html        # 보육 프로그램 / 오감놀이 / 야외체험
-├── activity-watermelon.html # 수박 오감놀이와 물놀이 활동소식
+├── activity-waterballoon.html # 물풍선 놀이와 0세반 물놀이 활동소식 (최신 · 네비 "활동소식" 연결)
+├── activity-watermelon.html # 수박 오감놀이와 물놀이 활동소식 (지난 글)
 ├── daily.html          # 하루일과 / 키즈노트 / 후기
 ├── contact.html        # 입소상담 / 오시는 길
 ├── menu-july.html      # 이달의 식단표
@@ -46,6 +47,12 @@
 | 프로그램(교구 뇌활동교육) 섹션 | montessori.jpg |
 | 체험활동 섹션 | experience.jpg (사물놀이 공연) |
 | 활동소식: 수박 오감놀이와 물놀이 | watermelon-play/ |
+| 활동소식: 물풍선 놀이와 0세반 물놀이 | waterballoon-play/ (cover + 01~11) |
+
+> 새 활동소식을 추가할 때는 `activity-*.html` 을 하나 더 만들고,
+> 모든 페이지 네비의 **활동소식** 링크를 최신 글로 바꾼 뒤
+> 각 활동 페이지 하단 `.activity-more` 카드에서 서로 연결해 주세요.
+> 사진은 긴 변 1200px, JPEG 품질 82 정도로 줄여서 넣으면 로딩이 빠릅니다.
 
 아직 임시 이미지(Unsplash)인 곳 — 실제 사진 확보 시 `<img src>` 교체:
 

@@ -531,6 +531,48 @@ section { padding: 72px 0; }
   grid-column: 1 / -1; aspect-ratio: 16 / 10;
 }
 
+/* 장면별 이야기 구성 (물풍선 놀이 등) */
+.activity-scene {
+  margin-top: 40px; padding-top: 36px;
+  border-top: 1px dashed var(--line);
+  max-width: 860px;
+}
+.activity-scene__title {
+  font-size: clamp(20px, 3.6vw, 26px);
+  font-weight: 900; color: var(--brown-deep);
+  line-height: 1.4; word-break: keep-all;
+}
+.activity-scene > p {
+  margin-top: 14px; font-size: 15px; color: var(--ink-soft);
+  word-break: keep-all;
+}
+.activity-scene .activity-points { margin-top: 20px; }
+.activity-scene--closing {
+  padding: 30px 24px; margin-top: 44px;
+  border: 1px solid var(--sage-100); border-radius: var(--radius-lg);
+  background: var(--bg-sage);
+}
+.activity-scene--closing .page-hero__actions { margin-top: 22px; }
+.scene-shots {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px; margin-top: 22px;
+}
+.scene-shot {
+  aspect-ratio: 4 / 5; overflow: hidden;
+  border-radius: var(--radius-sm); background: var(--bg-soft);
+  box-shadow: var(--shadow-sm);
+}
+.scene-shot img { width: 100%; height: 100%; object-fit: cover; }
+.scene-shot--wide { grid-column: 1 / -1; aspect-ratio: 16 / 10; }
+.activity-more {
+  margin-top: 48px; padding-top: 36px;
+  border-top: 1px dashed var(--line);
+}
+.activity-more__title {
+  font-size: 18px; font-weight: 900; color: var(--brown-deep);
+  margin-bottom: 18px;
+}
+
 /* ==========================================================================
    10. 수제 이유식 / 식단
    ========================================================================== */
@@ -783,6 +825,10 @@ section { padding: 72px 0; }
   .activity-flow { grid-template-columns: repeat(3, 1fr); }
   .activity-gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
   .activity-gallery__item--wide { grid-column: span 2; }
+  .activity-scene { margin-top: 52px; padding-top: 48px; }
+  .activity-scene--closing { padding: 36px 40px; }
+  .scene-shots { gap: 14px; }
+  .activity-more .home-link-grid { grid-template-columns: repeat(2, 1fr); }
   .reviews__grid { grid-template-columns: repeat(2, 1fr); }
   .kidsnote__items { grid-template-columns: repeat(3, 1fr); }
   .location__inner { grid-template-columns: 1.25fr 1fr; align-items: start; }
