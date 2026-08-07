@@ -9,7 +9,8 @@
 ├── index.html          # 짧은 메인 랜딩페이지
 ├── about.html          # 어린이집 소개 / 공간 / 위생
 ├── program.html        # 보육 프로그램 / 오감놀이 / 야외체험
-├── activity-waterballoon.html # 물풍선 놀이와 0세반 물놀이 활동소식 (최신 · 네비 "활동소식" 연결)
+├── activity-loach.html      # 0세~1세 미꾸라지 체험 활동소식 (최신 · 네비 "활동소식" 연결)
+├── activity-waterballoon.html # 물풍선 놀이와 0세반 물놀이 활동소식 (지난 글)
 ├── activity-watermelon.html # 수박 오감놀이와 물놀이 활동소식 (지난 글)
 ├── daily.html          # 하루일과 / 키즈노트 / 후기
 ├── contact.html        # 입소상담 / 오시는 길
@@ -48,6 +49,7 @@
 | 체험활동 섹션 | experience.jpg (사물놀이 공연) |
 | 활동소식: 수박 오감놀이와 물놀이 | watermelon-play/ |
 | 활동소식: 물풍선 놀이와 0세반 물놀이 | waterballoon-play/ (cover + 01~11) |
+| 활동소식: 0세~1세 미꾸라지 체험 | loach-play/ (cover + 01~12) |
 
 > 새 활동소식을 추가할 때는 `activity-*.html` 을 하나 더 만들고,
 > 모든 페이지 네비의 **활동소식** 링크를 최신 글로 바꾼 뒤
