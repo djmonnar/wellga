@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://djmonnar.github.io/wellga/sitemap.xml
